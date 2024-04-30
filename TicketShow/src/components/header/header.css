@@ -1,0 +1,96 @@
+
+*{
+    font-family:Arial, Helvetica, sans-serif;
+
+    
+}
+:root{
+    --color-N : black;
+    --color-R:  red;
+    --color-RN: rgb(116, 12, 12);
+    --color-W : white;
+    --color-redBack : #E0323B;
+    --color-bl: #6196B4;
+    --color-b2:#012D44;
+    --color-h: #f1e7cc;
+    --color-cr: #b90e1e;
+    --color-rv: #730001;
+}
+
+
+header{
+    padding: 0 5px 0 5px;
+    width: 100%;
+    transition: 0.3s;
+   
+}
+.header-Page{
+    width: 99%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+
+}
+.input-Search{
+    width: 50%;
+    height: 30px;
+}
+.input-Search input{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(222, 222, 222);
+    border-radius: 20px;
+    padding-left: 20px;
+    font-size: calc(0.1em + 1vw);
+}
+
+.RS-Logo{
+    font-size: 0.9em;
+    color: var(--color-redBack);
+    
+}
+.logo{
+    width: auto;
+    padding-left: 1%;
+    
+     color: var(--color-N);
+     font-size: calc(0.9em + 1vw);
+     font-weight: 600;
+    text-decoration: none;
+
+}
+
+.link-Dynamic{
+    display: flex;
+    gap: 40px;
+    font-size: calc(0.2em + 1vw);
+
+}.link-Dynamic a{
+    text-decoration: none;
+    color: var(--color-N);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.link-Dynamic a:hover{
+    color: var(--color-redBack);
+}
+
+
+
+.Sesion-Box{
+    width: calc(20px + 1vw);
+    height: calc(20px + 1vw);
+    border-radius: 100%;
+    border: 1px solid var(--color-N);
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.Sesion-Box:hover{
+    transform: scale(1.05);
+}

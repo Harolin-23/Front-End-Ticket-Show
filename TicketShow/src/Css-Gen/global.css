@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: 0.1s ease-in-out;
+    animation-name: op;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes op{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
