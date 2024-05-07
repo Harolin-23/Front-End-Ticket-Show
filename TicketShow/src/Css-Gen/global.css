@@ -10,6 +10,20 @@
     animation-fill-mode: forwards;
 }
 
+:root{
+    --color-w: #FFFFFF;
+    --color-B: #000000;
+    --color-MR : #E0323B;
+    --color-RN : #A91220;
+    --color-Pn: #E2C4C4;
+    --color-Bl : #012D44;
+    --color-MB: #4C2A36;
+    --color-MbB: #24282A;
+    /* Fonts*/
+
+}
+
+
 @keyframes op{
     0%{
         opacity: 0;

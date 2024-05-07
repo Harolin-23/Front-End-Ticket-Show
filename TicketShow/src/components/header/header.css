@@ -22,7 +22,7 @@ header{
     padding: 0 5px 0 5px;
     width: 100%;
     transition: 0.3s;
-   
+    height: 100px;
 }
 .header-Page{
     width: 99%;
@@ -46,7 +46,7 @@ header{
     background-color: rgb(222, 222, 222);
     border-radius: 20px;
     padding-left: 20px;
-    font-size: calc(0.1em + 1vw);
+    font-size: calc(0.1em + 0.9vw);
 }
 
 .RS-Logo{
@@ -82,15 +82,14 @@ header{
 
 
 
-.Sesion-Box{
-    width: calc(20px + 1vw);
-    height: calc(20px + 1vw);
-    border-radius: 100%;
-    border: 1px solid var(--color-N);
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-.Sesion-Box:hover{
+.sesionBlock:hover{
     transform: scale(1.05);
+}
+.sesionBlock{
+    width: 4%;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: var( --color-N);
+
 }
