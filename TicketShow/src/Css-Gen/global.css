@@ -3,6 +3,7 @@
     border: 0;
     padding: 0;
     box-sizing: border-box;
+<<<<<<< HEAD
     opacity: 0;
     transition: 0.1s ease-in-out;
     animation-name: op;
@@ -18,4 +19,8 @@
         opacity: 1;
     }
 
+=======
+
+    transition: 0.1s ease-in-out;
+>>>>>>> 6a2a180674355fbb3f2a9673a44f66fcc0b5df21
 }
