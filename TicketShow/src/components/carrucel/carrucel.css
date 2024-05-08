@@ -3,49 +3,44 @@
     --blackModified : #00000050;
 }
 
-
-
 .carrucel{
-    width: 100%;
-    height: 20%;
-    background-color: var(--color-MRModified);
-   
-    
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var( --color-MRModified);
+
 }
 .card-containers{
-    width: 100%;
-    height: 350px;
+    width: 1300px;
+    height: 260px;
     display: flex;
-    flex-direction: row;
+    justify-content: start;
     align-items: center;
-    padding-left: 5%;
-    justify-content: space-around;
-    gap:40px;
+    gap: 70px;
+    padding-left: 8%;
     overflow-x: auto;
+    
+
 }
-
-
-
-
 .cardCarrucel{
-    padding: 20px;
-    width: 40%;
-    height: 70%;
-    background-color: var( --blackModified);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    color: var( --color-w);
-    position: relative;
-}
-.textContent{
-    font-size: calc(0.3em + 1vw);
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    background-color: var(--blackModified);
+    width: 500px;
+    height: 80%;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 70px;
-    padding-left: 30px;
-    padding-top: 10px;
-
+    color: var(--color-w);
+    position: relative;
+    
+}
+.textContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30%;
 }
