@@ -4,43 +4,25 @@
 }
 
 .carrucel{
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var( --color-MRModified);
-
-}
-.card-containers{
-    width: 1300px;
-    height: 260px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 70px;
-    padding-left: 8%;
-    overflow-x: auto;
-    
-
-}
-.cardCarrucel{
-    background-color: var(--blackModified);
-    width: 500px;
-    height: 80%;
-    border-radius: 15px;
-    padding-left: 20px;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    color: var(--color-w);
-    position: relative;
-    
-}
-.textContent{
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 30%;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--blackModified);
+   
+
+}
+.contain{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+    padding-left: 1%;
+    background-color: var( --color-MRModified);
+    overflow-x: auto;
+    
+
 }

@@ -1,27 +1,20 @@
 import './carrucel.css'
 import '../../Css-Gen/global.css'
+import {data} from '../../props/cardsTemp/infoCards.js' 
+import {useEffect, useRef, useState} from 'react' 
 
-import {useState} from 'react'
+
 
 
 export function CarrucelG() {
+
     return(
     <div className='carrucel'>
-        
         <div className='card-containers'>
-
-                <div className='cardCarrucel'>
-                    <img src="" alt="" />
-                     <div className='textContent'>
-                        <h1>This music is a relax <br></br>Andres Cepeda</h1>
-                        <p>12 agosto</p>
-                    </div>
-                </div>
-
-
-
-
-       
+            
+          
+          
+        
         </div>
 
 

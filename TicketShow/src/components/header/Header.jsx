@@ -2,6 +2,7 @@ import './header.css'
 import {useState} from 'react'
 import {callSearch} from '../../Api/Search'
 import LinksDin from './LinksComponents/DynamicLinks'
+import React from 'react';
 
 let SearchEd = "";
 export const text = {
