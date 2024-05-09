@@ -1,10 +1,11 @@
 :root{
     --color-MRModified : #e0323bce;
     --blackModified : #00000050;
+    --pinkModified: #e2c4c449;
 }
 
 .carrucel{
-    width: 100%;
+    width: 99%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -13,16 +14,55 @@
    
 
 }
-.contain{
-    width: auto;
-    height: 100%;
+.card-containers{
+    width: 100%;
+    height: 280px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10%;
-    padding-left: 1%;
+    gap: 30px;
+    padding-left: 5%;
     background-color: var( --color-MRModified);
     overflow-x: auto;
+
     
 
+}
+.card-event{
+    width: 500px;
+    height: 70%;
+    border: 1px solid black;
+    border-radius: 15px;
+    position: relative;
+    
+}
+.card-event img{
+    position: absolute;
+    width: 100%;
+    height : 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+
+.text-CardEv{
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: calc(0.4em + 0.7vw);
+    color: var(--color-w);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    flex-direction: column;
+    gap: 30%;
+}
+
+
+.text-CardEv p{
+    position: absolute;
+    bottom: 30px;
+    
 }
