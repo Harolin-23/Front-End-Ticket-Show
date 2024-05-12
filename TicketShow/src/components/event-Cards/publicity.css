@@ -1,0 +1,42 @@
+.recomends{
+    width: 90%;
+    height: 340px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rec-card{
+    width: 40%;
+    height: 90%;
+    background: linear-gradient(#ffffffee, #0f101c73);
+    border-radius: 12px;
+    color: var( --color-w);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.text-card{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 10%;
+    padding-left: 20px;
+    font-size: calc(0.5em + 0.8vw);
+    
+}
+.rec-card:hover{
+    transform: scale(1.02);
+    cursor:pointer;
+    .text-card{
+        transform: translateY(20px);
+        
+    }
+}
+
+
+
+.text-card p{
+    color: var(  --color-MR);
+}

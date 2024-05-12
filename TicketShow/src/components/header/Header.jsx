@@ -37,7 +37,7 @@ export function HeaderGen() {
       <header>
         <div className="header-Page">
             <div className="logo">
-                <a href="" className='logo'>{text.Text}<b className="RS-Logo">{text.bold}</b>{text.textlag}</a>
+                <a href="/" className='logo'>{text.Text}<b className="RS-Logo">{text.bold}</b>{text.textlag}</a>
             </div>
             <div className='input-Search'>
               <input

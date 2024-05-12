@@ -9,17 +9,17 @@ import {text} from '../header/Header.jsx'
 export function BotomCategories(){
     return(
         <div className='categories'>
-            <div className='promM'>
+
+             <div className='promM'>
                 <div className="logo text">
-                    <a href="" className='logo'>{text.Text}<b className="RS-Logo">{text.bold}</b>{text.textlag}</a>
-                    <p className='originalS'>Originals</p>
+                    <div className='sep'></div>
                 </div>
                 <div className='MtC-Categories'>
+                        <div className='container-bt'>
 
-
-                    <a href="" className='botomCategorie'>
+                        <a href="" className='botomCategorie'>
                         <div className='btm-redictedCar'>
-                            <box-icon name='wink-tongue' className='icon'></box-icon>
+                        <i class="fa-solid fa-masks-theater icon"></i>
                             <p>1</p>
                             <h6>Funny</h6>
                         </div>
@@ -27,32 +27,35 @@ export function BotomCategories(){
 
                     <a href="" className='botomCategorie'>
                         <div className='btm-redictedCar'>
-                        <box-icon name='world'></box-icon>
+                        <i class="fa-solid fa-gem icon"></i>
                             <p>2</p>
-                            <h6>Funny</h6>
+                            <h6>Higgest</h6>
                         </div>
                     </a>
 
                     <a href="" className='botomCategorie'>
                         <div className='btm-redictedCar'>
-                            <box-icon name='group'></box-icon>
+                        <i class="fa-solid fa-people-group icon"></i>
                             <p>3</p>
-                            <h6>Funny</h6>
+                            <h6>Conferences</h6>
                         </div>
                     </a>
 
                     <a href="" className='botomCategorie'>
                         <div className='btm-redictedCar'>
-                            <box-icon name='dots-horizontal-rounded'></box-icon>
+                            <i class="fa-solid fa-ellipsis icon"></i>
                             <p>4</p>
                             <h6>Funny</h6>
                         </div>
+
                     </a>
                 </div>
+                </div>
+                
+
             </div>
-
-
         </div>
 
     )
 }
+

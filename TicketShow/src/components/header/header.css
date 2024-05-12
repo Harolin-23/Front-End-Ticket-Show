@@ -92,6 +92,6 @@ header{
     height: 30px;
     cursor: pointer;
     border-radius: 15px;
-    background-color: var( --color-N);
+    background-color: rgba(95, 91, 91, 0.493);
 
 }
