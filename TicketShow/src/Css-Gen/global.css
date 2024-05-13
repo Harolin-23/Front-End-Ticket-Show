@@ -7,6 +7,7 @@
     animation-name: op;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+
 }
 
 :root{
@@ -18,6 +19,7 @@
     --color-Bl : #012D44;
     --color-MB: #4C2A36;
     --color-MbB: #24282A;
+    --color-barr:  #012d44b1;
     /* Fonts*/
 
 }
@@ -32,3 +34,24 @@
     }
 
 }
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 20px; 
+    transition: 0.5s ease;
+    background:rgba(0, 0, 0, 0);
+  }
+
+*::-webkit-scrollbar-track {
+    
+    width: 60px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: var( --color-RN); 
+    border-radius: 6px; 
+   
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background:var(--color-MR); 
+  }

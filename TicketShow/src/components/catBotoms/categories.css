@@ -53,6 +53,9 @@
     
     .icon{
         transform: translateY(-5px);
+        color: var(--color-RN);
+        filter: drop-shadow(0 2px 20px rgb(255, 163, 107));
+        
     }
 
 }.container-bt a:active{

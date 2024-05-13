@@ -45,7 +45,7 @@ export function BotomCategories(){
                         <div className='btm-redictedCar'>
                             <i class="fa-solid fa-ellipsis icon"></i>
                             <p>4</p>
-                            <h6>Funny</h6>
+                            <h6>More</h6>
                         </div>
 
                     </a>

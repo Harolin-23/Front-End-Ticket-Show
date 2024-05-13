@@ -8,8 +8,8 @@ import {HeaderGen} from './components/header/Header.jsx'
 import {CarrucelG} from './components/carrucel/carrucel.jsx'
 import {BotomCategories} from './components/catBotoms/botomsCategories.jsx'
 
+import {DrawPublicity} from './components/publicity/PubliCards.jsx'
 
- 
 function App() {
 
   return (
@@ -18,8 +18,8 @@ function App() {
         <CarrucelG />
         <BotomCategories />
         <DrawEvents/>
+        <DrawPublicity />
     </>
   )
 }
-
 export default App;
