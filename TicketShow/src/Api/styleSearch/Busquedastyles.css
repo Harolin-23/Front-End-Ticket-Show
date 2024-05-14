@@ -1,0 +1,71 @@
+.infoBusq{
+    width: 98%;
+    height: 40px;
+    display: flex;  
+    padding-top: 20px;
+    padding-left: 20px;
+   
+}.infoBusq h6{
+    font-size: calc(0.7em + 1vw);
+    width: 100%;
+    display: flex;
+}
+
+.container-Events-search{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.card-ev{
+    width: 98%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.075);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    justify-content: space-around;
+}
+.imageEvent{
+    width: 30%;
+    height: 90%;
+    background-color: black;
+    border-radius: 12px;
+}
+
+.infoEvent{
+    width: 70%;
+    height: 80%;
+    border-radius: 12px;
+    padding-top: 20px;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 12px;
+    
+}
+
+.infoEvent h1{
+    font-size: calc(2em + 1vw);
+
+}
+.infoEvent a{
+    width: 200px;
+    height: 100px;
+    background-color: var(--color-MR);
+    border-radius: 12px;
+    color: var(--color-w);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(0.5em + 1vw);
+}
+
+.infoEvent a:hover{
+    background-color: var(--color-RN);
+}

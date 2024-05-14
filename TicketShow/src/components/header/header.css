@@ -23,7 +23,8 @@ header{
     width: 99%;
     height: 80px;
     transition: 0.3s;
-    position: relative;
+    z-index: 30;
+    background-color: white;
    
 }
 .header-Page{
@@ -82,16 +83,26 @@ header{
     color: var(--color-redBack);
 }
 
+.sesionBlock{
+    width: 5%;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}.sesionBlock i{
+    font-size: calc(0.2em + 1vw);
+    color : (--color-B);
+}
 
 
 .sesionBlock:hover{
     transform: scale(1.05);
-}
-.sesionBlock{
-    width: 4%;
-    height: 30px;
-    cursor: pointer;
-    border-radius: 15px;
-    background-color: rgba(95, 91, 91, 0.493);
 
+    .fa-user{
+        color :red;
+    }
 }

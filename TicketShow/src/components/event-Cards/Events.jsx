@@ -18,8 +18,6 @@ export function DrawEvents(){
     useEffect(()=>{
         GetEvent();
     },[])
-
-
     return(
         <div className='card-e'>
                 <div className='name-section'>
@@ -46,7 +44,6 @@ export function DrawEvents(){
         </div>
     )
 }
-
 
 function Publicity(){
     return(

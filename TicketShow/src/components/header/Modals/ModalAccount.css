@@ -1,0 +1,85 @@
+.accountModal{
+    width: 300px;
+    height: auto;
+    background-color: white;
+    z-index: 1000 !important; 
+    position: absolute; /* Use fixed positioning to make the modal appear relative to the viewport */
+    top: 60px; /* Position the modal at the top of the viewport */
+    right: 0; /* Position the modal at the left edge of the viewport */
+    box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.012),
+    0 0 0 2px rgba(255, 255, 255, 0.177),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.113);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 12px;
+}
+
+.textAccount{
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+}.textAccount h1{
+    font-size: calc(0.3em + 1vw);
+    text-align: center;
+}
+
+.container-account{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.sesion-Block{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.sesion-Block button{
+    width: 60%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var( --color-MR);
+    font-size: calc(0.5em + 0.6vw);
+    margin-bottom: 12px;
+    
+}.sesion-Block button:hover{
+    background-color: var(--color-MR);
+    color: var(--color-w)
+}.sesion-Block button:active{
+    transform: scale(1.04);
+}.sesion-Block p{
+    font-size: calc(0.3em + 1vw) !important;
+    width: 100%;
+    text-align: center;
+    color: black !important;
+}
+
+
+
+.sesion-Block a{
+    margin-bottom: 30px;
+    color: var(--color-Bl);
+
+}
+.accountModal p{
+    font-size: calc(0.4em + 0.5vw);
+    width: 80%;
+    color: rgba(0, 0, 0, 0.288);
+    margin-bottom: 10px;
+}

@@ -39,27 +39,28 @@ export function DrawPublicity(){
                     <div className='cointer'>
                         <div className='D num'>
                             <p>{days}</p>
-                            <p>Dias</p>
+                            <h6>Dias</h6>
                         </div>
                         <div className='H num'>
                             <p>{hours}</p>
-                            <p>Horas</p>
+                            <h6>Horas</h6>
                         </div>
                         <div className='M num'>
                             <p>{minutes}</p>
-                            <p>Minutos</p>
+                            <h6>Minutos</h6>
                         </div>
                         <div className='S num'>
                             <p>{seconds}</p>
-                            <p>segundos</p>
+                            <h6>Segundos</h6>
                         </div>
                     </div>
                 <div className='bto-more'>
                     <button>Show More</button>
+                    
                 </div>
             </div>
             <div className='image-public-event'>
-                <img src="../../../public/Assets/karina-lago-wEucG_sLRsY-unsplash.jpg" alt="" />
+                <img src="../../../public/Assets/samantha-gades-fIHozNWfcvs-unsplash.jpg" alt="" />
             </div>
         </div>
     )

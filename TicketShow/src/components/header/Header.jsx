@@ -1,8 +1,15 @@
-import './header.css'
+
 import {useState} from 'react'
 import {callSearch} from '../../Api/Search'
-import LinksDin from './LinksComponents/DynamicLinks'
 import React from 'react';
+
+import LinksDin from './LinksComponents/DynamicLinks'
+import './header.css'
+import './LinksComponents/ModalStyle.css'
+import ModalAccount from './Modals/AccountModal'
+
+
+
 
 let SearchEd = "";
 export const text = {
@@ -10,28 +17,38 @@ export const text = {
   bold:"S",
   textlag: "how"
 }
- const links = {
-      link_c: "categories",
-      link_cI: "Ciudades",
-      link_cII: "home",
-      link_CIII: "about",
-      link_IV : "Contact"  
-  }
+
 export function HeaderGen() {
 
-  const [searched, SetSearched] = useState('');
 
-  const [activeModal,setModel] = useState("active");
+  //  Estado de cuenta activo
+  const [isLoggedd,setIsLogged] = useState(false);
+
+
+  //Busqueda Logic-------------------
+    //Estado de Busqueda
+  const [searched, SetSearched] = useState('');
 
   const keyPress = (event)=>{
     if(event.key === 'Enter'){
-        callSearch(SearchEd)
-      }
+      SearchEd!=="" ?  callSearch(SearchEd): null;
+    }
   }
   const handleChanged = (event) =>{
     SetSearched(event.target.value);
     SearchEd = event.target.value;
   }
+  //--------------------------------
+
+    //Initializacion de Modal Desactivado
+    const [modalOpen,setModalOpen] = useState(false);
+
+  const clickedModad = (event)=>{
+      modalOpen === true ? setModalOpen(false) : setModalOpen(true);
+      ModalVerified(modalOpen);
+  }
+
+//----------------------------------------------------
     return (
     <>
       <header>
@@ -50,11 +67,30 @@ export function HeaderGen() {
             </div>
             <LinksDin />
 
-            <div className='sesionBlock'>
-              
+            <div className='sesionBlock' onClick={clickedModad}>
+              {
+              isLoggedd? (
+                <i class="fa-regular fa-circle"></i>
+                ) : (
+                  <i className="fa-solid fa-user"></i>
+                )}
             </div>
+            {modalOpen ?(
+              <ModalAccount />
+            ):
+           <div></div>
+          }
+            
       </div>
       </header>
       </>
     )
+
   }
+
+
+
+
+
+
+
