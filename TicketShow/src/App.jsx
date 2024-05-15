@@ -4,6 +4,8 @@ import './Css-Gen/global.css'
 import React from 'react';
 
 import {DrawEvents} from './components/event-Cards/Events.jsx'
+import {DrawEvents2} from './components/event-Cards/events2.jsx'
+ 
 import {HeaderGen} from './components/header/Header.jsx'
 import {CarrucelG} from './components/carrucel/carrucel.jsx'
 import {BotomCategories} from './components/catBotoms/botomsCategories.jsx'
@@ -21,7 +23,7 @@ function App() {
         <BotomCategories />
         <DrawEvents/>
         <DrawPublicity />
-         <DrawEvents/>
+        <DrawEvents2 />
          <InfoUs />
          <FooterApp />
 
