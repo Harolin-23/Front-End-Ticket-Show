@@ -38,11 +38,23 @@
     height: auto;
     padding-left: 20px;
     margin-bottom: 70px;
-}.text-section-loging h3{
+}
+.registerSection-text{
+    margin-bottom: 10px !important;
+}
+
+
+
+.text-section-loging h3{
     font-size: calc(2em + 1vw);
     margin-left: 15%;
     margin-top: 8%;
 }
+
+
+
+
+
 
 form{
     width: 100%;
@@ -54,6 +66,13 @@ form{
     padding-left: 12px;
     padding-right: 12px;
 }
+
+.formRegister{
+    height: 98%;
+    gap: 8%;
+}
+
+
 form input{
     width: 70%;
     height: 10%;
@@ -141,4 +160,12 @@ form input{
     transform: rotate(-42deg);
     background-color: rgba(255, 255, 255, 0.26);
     position: absolute;
+}
+
+.registerLine{
+    margin-top: 140px;
+}
+
+.btn-Register{
+    margin-top: 12px;
 }

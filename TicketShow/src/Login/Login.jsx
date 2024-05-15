@@ -11,7 +11,6 @@ import {FooterApp} from '../components/footer/Footer.jsx'
 import { loginAutenticate} from '../Api/UserApi/CallVerUser.jsx'
 
 
-
 function LoginPage(){
 
     const [Password, setPassword] = useState('');
