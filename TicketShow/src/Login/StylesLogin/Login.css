@@ -1,12 +1,144 @@
 .titule-Login{
     width: 100%;
     align-items: center !important;
+    margin-top: 12px;
     justify-content: center;
     display: flex;
-    background-color: black;
  
     
 }
 .titule-Login .logo{
     text-align: center;
+}
+
+
+.ContainerSesion{
+    width: 100%;
+    height: 70vh;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-container{
+    width: 50%;
+    height: 100%;
+}
+
+.Deco-section{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+.text-section-loging{
+    width: 100%;
+    height: auto;
+    padding-left: 20px;
+    margin-bottom: 70px;
+}.text-section-loging h3{
+    font-size: calc(2em + 1vw);
+    margin-left: 15%;
+    margin-top: 8%;
+}
+
+form{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+form input{
+    width: 70%;
+    height: 10%;
+    border-radius: 10px;
+    background-color: #d9d9d957;
+    padding-left: 3%;
+}
+.met-Links{
+    width: 70%;
+    height: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -8%;
+    gap: 10px;
+}.met-Links a{
+    margin-bottom: 30px;
+    color:#A91220;
+}
+
+
+
+.met-Links button{
+    background-color: #E0323B;
+    width: 50%;
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+    font-size: calc(0.5em + 1vw);
+}
+
+.information-sec{
+    width: 100%;
+    height: auto;
+    padding: 12px;
+
+}
+.information-sec p{
+    margin-left: 15%;
+    display: flex;
+    gap: 12px;
+    color: rgba(0, 0, 0, 0.541);
+}
+.information-sec p i{
+    color:  #E0323B;
+}
+
+.Deco-section .cont-dec{
+    width: 90%;
+    height: 30%;
+    background-color: #e0323b9f;
+    border-radius: 12px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    position: relative;
+    z-index: -1;
+}
+
+.image{
+    width: 70%;
+    height: 490px;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 2;
+}
+
+.sep{
+    width: 98%;
+    height: 2px;
+    margin-left: 1%;
+    background-color: rgba(0, 0, 0, 0.103);
+}
+.dec-line{
+    width: 400px;
+    height: 2px;
+    z-index: 1;
+    right: 700px;
+    transform: rotate(-42deg);
+    background-color: rgba(255, 255, 255, 0.26);
+    position: absolute;
 }

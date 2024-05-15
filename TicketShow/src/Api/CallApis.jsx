@@ -1,4 +1,4 @@
-import {DrawsSearch} from './Search.jsx'
+import {DrawsSearch} from './search/styleSearch/Search.jsx'
 
 
 export async function GetById(id){

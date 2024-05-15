@@ -1,6 +1,6 @@
 
 import {useState} from 'react'
-import {callSearch} from '../../Api/Search'
+import {callSearch} from '../../Api/search/styleSearch/Search.jsx'
 import React from 'react';
 
 import LinksDin from './LinksComponents/DynamicLinks'
