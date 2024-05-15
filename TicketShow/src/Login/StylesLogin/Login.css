@@ -1,0 +1,12 @@
+.titule-Login{
+    width: 100%;
+    align-items: center !important;
+    justify-content: center;
+    display: flex;
+    background-color: black;
+ 
+    
+}
+.titule-Login .logo{
+    text-align: center;
+}

@@ -12,6 +12,8 @@ import ModalAccount from './Modals/AccountModal'
 
 
 let SearchEd = "";
+
+
 export const text = {
   Text:"Ticket",
   bold:"S",
@@ -49,6 +51,12 @@ export function HeaderGen() {
   }
 
 //----------------------------------------------------
+
+
+
+
+//--------------------------------------------
+
     return (
     <>
       <header>

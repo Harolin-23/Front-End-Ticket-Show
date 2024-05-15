@@ -5,7 +5,12 @@ import './ModalAccount.css'
 
 function ModalAccount(Checked){
 
-    const [status,setStatus] = useState(false)
+    const [status,setStatus] = useState(false);
+
+    //Redirects To logins
+    const clickedRedirect = (event)=>{
+    window.location.href = '/Login';
+    }
 
   return(
     <div className='accountModal'>
@@ -17,13 +22,12 @@ function ModalAccount(Checked){
                 <div className='sesion-Block'>
                      <button>Sing Out</button>
                      <a href="">Tu informacion</a>
-                  
                 </div>
         ) : (
             <div className='sesion-Block'>
-                    <button>Login</button>
+                    <button onClick={clickedRedirect}>Login</button>
                         <p>or</p>
-                    <a href="">Registrer</a>
+                    <a href="/Registrer">Registrer</a>
             </div>
         )   
             }
