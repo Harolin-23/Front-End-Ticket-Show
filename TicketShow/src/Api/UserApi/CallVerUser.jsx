@@ -1,6 +1,12 @@
+import axios from 'axios';
 
-export function loginAutenticate(email,password){
-    console.log(email)
-    console.log(password);
-}
+const API_URL = 'http://localhost:3000/api/v1/auth';
 
+export const loginAutenticate = async (email, password) => {
+  try {
+    const response = await axios.post(`${API_URL}/login`, { email, password });
+    return response
+  } catch (error) {
+    throw new Error(error.message || 'Login error');
+  }
+};
