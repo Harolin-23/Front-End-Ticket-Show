@@ -12,14 +12,19 @@
 }
 
 .container-Events-search{
-    width: 100%;
+    width: 95%;
     height: auto;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 .card-ev{
-    width: 98%;
-    height: 300px;
+    width: 95%;
+    height: 250px;
     background-color: rgba(0, 0, 0, 0.075);
     border-radius: 12px;
     display: flex;
@@ -68,4 +73,8 @@
 
 .infoEvent a:hover{
     background-color: var(--color-RN);
+}
+.b{
+    width: 90%;
+    background-color: rgb(230, 230, 230);
 }
