@@ -15,3 +15,15 @@ export async function getEvents(page , size){
 
 }
 
+
+export async function getEvent(id){
+
+    const getEventUrl = `/events/search/?event=${id}&size=${size}`;
+
+    const response = await fetch(URL + getEventUrl);
+    const data = await response.json();
+    
+    return data.content;
+
+}
+
