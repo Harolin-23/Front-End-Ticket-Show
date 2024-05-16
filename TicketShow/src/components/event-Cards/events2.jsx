@@ -42,7 +42,7 @@ export function DrawEvents2(){
                     events.map((e, index) => (
                         <div className='cardE' key={index}>
                             <div className='image-event'>
-                                <img src={e.image_url} alt="" />
+                                <img src={ e.image_url} />
                             </div>
                             <div className='infoContain-card-event'>
                                 <h6>{e.title}</h6>
@@ -71,20 +71,20 @@ function Publicity(){
         <div className='recomends'>
 
             <div className='rec-card'>
-                <img src="" alt="" />
+                <img src="https://images.pexels.com/photos/2402777/pexels-photo-2402777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  />
 
                 <div className='text-card'>
-                    <h1>Pary Fest</h1>
-                    <p>30 de mayo</p>
+                    <h1>Divertido</h1>
+                    <p>Tap for more Info</p>
                 </div>
             </div>
 
             <div className='rec-card'>
-            <img src="" alt="" />
+            <img src="https://images.pexels.com/photos/57980/pexels-photo-57980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                 
                 <div className='text-card'>
-                    <h1>Conferencia</h1>
-                    <p>14 de abril</p>
+                    <h1>Reuniones</h1>
+                    <p>Tap for more Info</p>
                 </div>
             </div>
             </div>

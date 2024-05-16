@@ -50,6 +50,8 @@ header{
     border-radius: 20px;
     padding-left: 20px;
     font-size: calc(0.1em + 0.9vw);
+    padding: 2px;
+    padding-left: 12px;
 }
 
 .RS-Logo{

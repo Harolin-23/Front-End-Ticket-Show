@@ -4,12 +4,15 @@ import {HeaderGen} from './components/header/Header.jsx'
 import {BusquedaFuction} from './Api/search/styleSearch/Search.jsx'
 import {FooterApp} from './components/footer/Footer.jsx'
 
+import ReactDOM from 'react-dom/client'
+
+
+
 function ResultsComponent() {
   return (
     <>
       <HeaderGen />
       <BusquedaFuction />
-
     </>
   );
 }

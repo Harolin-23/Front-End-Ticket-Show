@@ -7,7 +7,6 @@ import {useEffect, useRef, useState} from 'react';
 import {publicity} from '../../props/cardsTemp/eventsD.js';
 import {getEvents} from '../../Api/EventsApi/manageEventsApi.jsx'
 
-
 export function DrawEvents(){
     const [events, setEvents] = useState([]);
 
@@ -20,13 +19,10 @@ export function DrawEvents(){
                 return () => clearInterval(intervalId);
             } catch (error) {
                 console.error('Error fetching events:', error);
-            }
-           
+            } 
         };
-
         fetchEvents();
     }, []);
-
 
     return (
         <div className='card-e'>
@@ -58,29 +54,29 @@ export function DrawEvents(){
             </div>
             <Publicity />
         </div>
-    );
-    
+    );   
 }
+
 
 function Publicity(){
     return(
         <div className='recomends'>
 
             <div className='rec-card'>
-                <img src="" alt="" />
+                <img src="https://images.pexels.com/photos/258804/pexels-photo-258804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
 
                 <div className='text-card'>
                     <h1>Pary Fest</h1>
-                    <p>30 de mayo</p>
+                    <p>Tap for more Info</p>
                 </div>
             </div>
 
             <div className='rec-card'>
-            <img src="" alt="" />
+            <img src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg" alt="" />
                 
                 <div className='text-card'>
                     <h1>Conferencia</h1>
-                    <p>14 de abril</p>
+                    <p>Tap for more Info</p>
                 </div>
             </div>
             </div>

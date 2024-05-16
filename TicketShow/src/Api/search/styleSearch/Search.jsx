@@ -1,4 +1,4 @@
-U
+
 import React from 'react';
 import {useEffect, useState} from 'react' 
 
@@ -29,7 +29,11 @@ export async function callSearch(busqueda){
     
 export function BusquedaFuction(){
 
-!isNaN BusquedaGen ? GetById() : GetTitule();
+    if(!isNaN (busquedaGen)){
+        GetById() 
+    }else{
+        GetTitule()
+    }
 
     return(
         <>

@@ -16,9 +16,9 @@ export async function GetById(){
   export async function GetTitule(){
     let bLocal = localStorage.getItem("search");
 
-    const urlNameSearch = `http://localhost:8080/api/v1/events/search/?title=${bLocal}&page=1&size=10`;
+    const urlNameSearch = `events/search/?title=${bLocal}&page=1&size=10`;
 
-    const response = await fetch(urlNameSearch);
+    const response = await fetch( Url + urlNameSearch);
     const data = await response.json();
 
     return data.content;
@@ -26,12 +26,39 @@ export async function GetById(){
 
 
 
-export async function GetEventCategorie(categorie){
+  export async function GetCategorie(page){
 
-    const urlNameSearch = `events/search/?title=${categorie}&page=1&size=10`;
+    let urlNameSearch;
 
-    const response = await fetch(URL + urlNameSearch);
+      urlNameSearch = `events/search/?page=${page}&size=6` 
+      const response = await fetch( Url + urlNameSearch);
+      const data = await response.json();
+  
+      return data.content; 
+    }
+
+
+  
+
+
+  export async function GetCategorieOther(page){
+
+    let urlNameSearch;
+
+    const value = localStorage.getItem("categories")
+
+    urlNameSearch = `events/search/?category=${value}&page=1&size=6`
+
+    const response = await fetch( Url + urlNameSearch);
     const data = await response.json();
 
     return data.content;
+
   }
+
+
+
+
+
+
+

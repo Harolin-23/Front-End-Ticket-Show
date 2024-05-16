@@ -3,10 +3,23 @@ import React from 'react';
 import './categories.css'
 import '../carrucel/carrucel.css'
 
+import CategireCast from '../../Api/search/categorieSearch/categories.jsx'
+
 import {text} from '../header/Header.jsx'
 
 
 export function BotomCategories(){
+
+
+
+    const [valorAdicional, setValorAdicional] = useState(""); 
+
+    const handleClick = (value) => {
+        localStorage.setItem("categories",value);
+    };
+
+
+
     return(
         <div className='categories'>
 
@@ -14,10 +27,15 @@ export function BotomCategories(){
                 <div className="logo text">
                     <div className='sep'></div>
                 </div>
+
+
+        
                 <div className='MtC-Categories'>
                         <div className='container-bt'>
 
-                        <a href="" className='botomCategorie'>
+
+
+                        <a onClick={() => {handleClick("Funny")}} href="/search/category" className='botomCategorie'>
                         <div className='btm-redictedCar'>
                         <i class="fa-solid fa-masks-theater icon"></i>
                             <p>1</p>
@@ -25,7 +43,7 @@ export function BotomCategories(){
                         </div>
                     </a>
 
-                    <a href="" className='botomCategorie'>
+                    <a onClick={() => {handleClick("Higgest")}} href="/search/category" className='botomCategorie'>
                         <div className='btm-redictedCar'>
                         <i class="fa-solid fa-gem icon"></i>
                             <p>2</p>
@@ -33,7 +51,7 @@ export function BotomCategories(){
                         </div>
                     </a>
 
-                    <a href="" className='botomCategorie'>
+                    <a  onClick={() => {handleClick("Conferences")}} href="/search/category" className='botomCategorie'>
                         <div className='btm-redictedCar'>
                         <i class="fa-solid fa-people-group icon"></i>
                             <p>3</p>
@@ -41,7 +59,7 @@ export function BotomCategories(){
                         </div>
                     </a>
 
-                    <a href="" className='botomCategorie'>
+                    <a  onClick={() => {handleClick("More")}}   href="/search/category" className='botomCategorie'>
                         <div className='btm-redictedCar'>
                             <i class="fa-solid fa-ellipsis icon"></i>
                             <p>4</p>
@@ -51,8 +69,6 @@ export function BotomCategories(){
                     </a>
                 </div>
                 </div>
-                
-
             </div>
         </div>
 
