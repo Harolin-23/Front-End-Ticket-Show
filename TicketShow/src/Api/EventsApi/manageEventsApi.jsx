@@ -18,7 +18,7 @@ export async function getEvents(page , size){
 
 export async function getEvent(id){
 
-    const getEventUrl = `/events/search/?event=${ID}`;
+    const getEventUrl = `/events/search/?event=${id}`;
 
     const response = await fetch(URL + getEventUrl);
     const data = await response.json();

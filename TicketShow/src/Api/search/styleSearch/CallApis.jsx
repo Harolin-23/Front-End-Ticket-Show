@@ -25,13 +25,3 @@ export async function GetById(){
   }
 
 
-
-export async function GetEventCategorie(categorie){
-
-    const urlNameSearch = `events/search/?title=${categorie}&page=1&size=10`;
-
-    const response = await fetch(URL + urlNameSearch);
-    const data = await response.json();
-
-    return data.content;
-  }
