@@ -8,8 +8,6 @@ import {publicity} from '../../props/cardsTemp/eventsD.js';
 import {getEvents} from '../../Api/EventsApi/manageEventsApi.jsx'
 
 
-
-
 export function DrawEvents(){
     const [events, setEvents] = useState([]);
 
@@ -18,13 +16,17 @@ export function DrawEvents(){
             try {
                 const eventData = await getEvents(1,4);
                 setEvents(eventData);
+                const intervalId = setInterval(fetchEvents, 30000);
+                return () => clearInterval(intervalId);
             } catch (error) {
                 console.error('Error fetching events:', error);
             }
+           
         };
 
         fetchEvents();
     }, []);
+
 
     return (
         <div className='card-e'>
@@ -46,7 +48,12 @@ export function DrawEvents(){
                         </div>
                     ))
                 ) : (
-                    <p><i class="fa-solid fa-link-slash"></i></p>
+                    <>
+                    <div className='cardE notCharged loding1'></div>
+                    <div className='cardE notCharged loding2'></div>
+                    <div className='cardE notCharged loding3'></div>
+                    <div className='cardE notCharged loding4'></div>
+                    </>
                 )}
             </div>
             <Publicity />

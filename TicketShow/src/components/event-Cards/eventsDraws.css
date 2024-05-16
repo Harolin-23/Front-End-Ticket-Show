@@ -86,3 +86,85 @@
     cursor:pointer;
 
 }
+
+.notCharged{
+    background-color: rgba(128, 128, 128, 0.089);
+    border-radius: 12px;
+}
+
+
+.loding1{
+    animation-name: one-c;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+@keyframes one-c{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.loding2{
+    animation-name: two-c;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+@keyframes two-c{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.loding3{
+    animation-name: tree-c;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.7s;
+    opacity: 0;
+}
+@keyframes tree-c{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.loding4{
+    animation-name: four-c;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s !important;
+    opacity: 0;
+}
+@keyframes four-c{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

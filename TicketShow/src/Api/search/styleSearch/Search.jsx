@@ -6,7 +6,7 @@ import {useEffect, useState} from 'react'
 
 import './Busquedastyles.css'
 import {SectionConfig} from '../../../components/SectionConfig/btns-ConfigSearch.jsx'
-import {GetById} from '../../CallApis.jsx'
+import {GetById} from './CallApis.jsx'
 
 
 let busquedaGen = null;
