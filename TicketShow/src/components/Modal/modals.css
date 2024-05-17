@@ -15,13 +15,14 @@
     animation-name: fadeIn;
     animation-duration: 3.5s;
     animation-fill-mode: forwards;
-    
+    animation-play-state: paused ;
     opacity: 0;
 }
 
 
 .modal-overlay-seion-errors.show{
     display: flex !important;
+    animation-play-state:running !important;
 }
 
 @keyframes fadeIn {

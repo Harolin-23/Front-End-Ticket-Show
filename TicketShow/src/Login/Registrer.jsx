@@ -59,7 +59,9 @@ export function RegistrerPage(){
             localStorage.removeItem('error');
         }
       
+
         RegisterAutenticate(email, Password,UserName);
+        activeModal("Registrado con exito")
     }
 
      function chargeEventLoader() {
