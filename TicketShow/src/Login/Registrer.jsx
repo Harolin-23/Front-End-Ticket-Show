@@ -15,14 +15,6 @@ import {Modal} from '../components/Modal/modalErrors.jsx';
 
 
 
-
-
-
-
-
-
-
-
 export function RegistrerPage(){
 
     const storedError = localStorage.getItem('error');
@@ -54,14 +46,15 @@ export function RegistrerPage(){
             activeModal('las contraseñas no coinciden');
             return;
         }
-        if(storedError != ""){
+        if(storedError){
             activeModal(storedError);
             localStorage.removeItem('error');
+            return;
         }
-      
 
+        
         RegisterAutenticate(email, Password,UserName);
-        activeModal("Registrado con exito")
+        window.location.href = "/Login"
     }
 
      function chargeEventLoader() {

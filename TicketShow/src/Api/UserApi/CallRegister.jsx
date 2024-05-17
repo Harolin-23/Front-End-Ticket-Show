@@ -11,6 +11,7 @@ export const RegisterAutenticate = async (email, password, username) => {
   } catch (error) {
       if (error.response && error.response.data) {
           const errorMessage = error.response.data.message;
+        console.log(errorMessage)
           errorParam(errorMessage);
 
       } else {
