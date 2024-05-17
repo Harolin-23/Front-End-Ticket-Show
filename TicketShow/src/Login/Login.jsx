@@ -10,7 +10,7 @@ import {FooterApp} from '../components/footer/Footer.jsx'
 import { Modal } from '../components/Modal/modalErrors.jsx';
 //iMPORTANTE esta es la importacion de la funcion que hace fech a la api para loguear
 import { loginAutenticate} from '../Api/UserApi/CallVerUser.jsx'
-
+import {authenticationRole} from '../Api/UserApi/Verified/RoleVerified.jsx'
 import {errorParam} from '../props/ErrorsLogin/ErrorsHandler.jsx'
 
 
@@ -41,7 +41,7 @@ function LoginPage(){
 
             const token = response.data.data.token;            
             sessionStorage.setItem('sessionToken', token);
-
+            authenticationRole();
         }catch(e){
             setTimeout(() => {
                 const errValue = localStorage.getItem("error");
@@ -50,13 +50,14 @@ function LoginPage(){
                     activeModal(errValue);
                 } else {
                     setErrAlert('');
-                    console.log("succes")
                 }
                 localStorage.removeItem("error");
             }, 500);
         };
 
         }
+
+
     const chargeEventLoader = () => {
         setShowLoader(true);
         setTimeout(() => {
@@ -80,11 +81,6 @@ function LoginPage(){
             closeModal();
         }, 3000); 
     };
-
-
-
-
-
     return(
         <>
         <div className='titule-Login'>
