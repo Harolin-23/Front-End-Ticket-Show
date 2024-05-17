@@ -61,7 +61,7 @@ export function RegistrerPage(){
       
 
         RegisterAutenticate(email, Password,UserName);
-        activeModal("Registrado con exito")
+        window.location.href = "/Login"
     }
 
      function chargeEventLoader() {
