@@ -19,5 +19,3 @@ export const Modal = ({ show, message, onClose }) => {
         </div>
     );
 };
-
-
