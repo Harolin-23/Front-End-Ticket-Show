@@ -44,11 +44,14 @@ export function RegisterPage() {
         }, 500);
     };
 
+
+
+    
     const chargeEventLoader = () => {
         setShowLoader(true);
         setTimeout(() => {
             setShowLoader(false);
-        }, 1000);
+        }, 1500);
     };
 
     const showMessage = (message) => {

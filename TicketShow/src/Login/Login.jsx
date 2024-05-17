@@ -4,36 +4,93 @@ import React from 'react';
 
 import './StylesLogin/Login.css'
 import '../Css-Gen/global.css'
+import '../props/ErrorsLogin/errors.css';
 import {FooterApp} from '../components/footer/Footer.jsx'
 
-
+import { Modal } from '../components/Modal/modalErrors.jsx';
 //iMPORTANTE esta es la importacion de la funcion que hace fech a la api para loguear
 import { loginAutenticate} from '../Api/UserApi/CallVerUser.jsx'
+
+import {errorParam} from '../props/ErrorsLogin/ErrorsHandler.jsx'
 
 
 function LoginPage(){
 
+    const [ErrAlert, setErrAlert] = useState('');
+    const [showLoader, setShowLoader] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [modalMessage, setModalMessage] = useState('');
+
     const [Password, setPassword] = useState('');
     const [email, setEmail] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
     
 
         if (setPassword === '' || email === '') {
-          alert('Datos vacios(Modal)');
+            activeModal("Por favor, ingrese los datos");
           return;
+        }else if(Password.length < 8){
+            activeModal("Solo se aceptan 8 digitos");
         }
-        loginAutenticate(email, Password)
-    }
+
+        await loginAutenticate(email, Password);
+        try{
+            const response = await loginAutenticate(email, Password);
+
+            const token = response.data.data.token;            
+            sessionStorage.setItem('sessionToken', token);
+
+        }catch(e){
+            setTimeout(() => {
+                const errValue = localStorage.getItem("error");
+                if (errValue) {
+                    setErrAlert(errValue);
+                    activeModal(errValue);
+                } else {
+                    setErrAlert('');
+                    console.log("succes")
+                }
+                localStorage.removeItem("error");
+            }, 500);
+        };
+
+        }
+    const chargeEventLoader = () => {
+        setShowLoader(true);
+        setTimeout(() => {
+            setShowLoader(false);
+        }, 1500);
+    };
+
+    const showMessage = (message) => {
+        setModalMessage(message);
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+        setModalMessage('');
+    };
+
+    const activeModal = (message) => {
+        showMessage(message);
+        setTimeout(() => {
+            closeModal();
+        }, 3000); 
+    };
+
+
+
+
 
     return(
         <>
         <div className='titule-Login'>
             <a href="/" className='logo'>{text.Text}<b className="RS-Logo">{text.bold}</b>{text.textlag}</a>
-
-            
         </div>
+        <Modal show={showModal} message={modalMessage} onClose={closeModal} />
         <div className='ContainerSesion'>
             <div className='formulario-container'>
                 <div className='text-section-loging'>
@@ -51,8 +108,8 @@ function LoginPage(){
                     <p>Dont't have a account?</p>
                     <a href="/Registrer">Registrer</a>
 
-                    <button type='submit'>Ingresar</button>
-
+                    <button type='submit' onClick={chargeEventLoader}>Ingresar</button>
+                    {showLoader && <div className='authMesage'><i className="fa-solid fa-network-wired"></i></div>}
                     </div>
                 </form>
             </div>

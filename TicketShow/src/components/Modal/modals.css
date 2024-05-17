@@ -50,7 +50,7 @@
 
 
 .modal-content{
-    width: 30%;
+    width: 20%;
     height: auto;
     background-color: rgb(53, 15, 15);
     border-radius: 12px;
@@ -61,7 +61,7 @@
 
 }
 .modal-content h2{
-    font-size: calc(0.3em + 1vw);
+    font-size: calc(0.3em + 0.7vw);
     color: white;
     margin-top: 12px;
     display: flex;
