@@ -93,3 +93,22 @@
 .bto-more button:hover{
     background-color: var(--color-MR);
 }
+
+
+.loader-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.changeLoader{
+    width: 90%;
+    background-color: rgba(143, 143, 143, 0.247);
+    height: 90%;
+    border-radius: 12px;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}

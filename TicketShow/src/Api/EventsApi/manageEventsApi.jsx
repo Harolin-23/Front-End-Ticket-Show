@@ -27,3 +27,13 @@ export async function getEvent(id){
 
 }
 
+
+export async function GetAllEvnts(){
+
+    const UrlSet = `/events/search/?page=1&size=200`
+    const response = await fetch(URL + UrlSet);
+    const data = await response.json();
+
+    return data.content;
+}
+

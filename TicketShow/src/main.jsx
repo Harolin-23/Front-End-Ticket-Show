@@ -10,7 +10,7 @@ import ResultsComponent from './SearchedPage.jsx'
 import LoginPage from './Login/Login.jsx'
 import RegistrerPage from './Login/Registrer.jsx'
 import CategireCast from './Api/search/categorieSearch/categories.jsx'
-
+import Admin from './Admin/AdminPage.jsx'
 
 
 
@@ -24,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/Registrer" element={<RegistrerPage />} />
         <Route path="/search/category" element={<CategireCast />}   /> 
+        <Route path="/ADMIN" element={<Admin />}   /> 
       </Routes>
     </Router>
 </>

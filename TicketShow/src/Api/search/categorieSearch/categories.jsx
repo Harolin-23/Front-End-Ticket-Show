@@ -8,6 +8,7 @@ import './categories.css';
 import '../../../Css-Gen/global.css';
 
 function CategireCast() {
+
     const value = localStorage.getItem("categories");
 
     const [eventCategorie, setEventCategorie] = useState([]);

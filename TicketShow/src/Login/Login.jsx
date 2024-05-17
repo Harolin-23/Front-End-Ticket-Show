@@ -39,9 +39,12 @@ function LoginPage(){
         try{
             const response = await loginAutenticate(email, Password);
 
-            const token = response.data.data.token;            
-            sessionStorage.setItem('sessionToken', token);
-            authenticationRole();
+            const token = response.data.data.token;   
+            const emailPetition =  response.data.data.email;
+
+                     sessionStorage.setItem('sessionToken', token);
+                     sessionStorage.setItem('EmailPetition', emailPetition);
+                     authenticationRole();
         }catch(e){
             setTimeout(() => {
                 const errValue = localStorage.getItem("error");

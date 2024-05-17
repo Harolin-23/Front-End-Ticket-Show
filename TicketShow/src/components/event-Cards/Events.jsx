@@ -57,7 +57,6 @@ export function DrawEvents(){
     );   
 }
 
-
 function Publicity(){
     return(
         <div className='recomends'>

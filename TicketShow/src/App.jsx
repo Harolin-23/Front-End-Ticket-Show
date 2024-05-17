@@ -24,8 +24,9 @@ function App() {
         <DrawEvents/>
         <DrawPublicity />
         <DrawEvents2 />
-         <InfoUs />
-         <FooterApp />
+        <DrawPublicity />
+        <InfoUs />
+        <FooterApp />
 
     </>
   )
