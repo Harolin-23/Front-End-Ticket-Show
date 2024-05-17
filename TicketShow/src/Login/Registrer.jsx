@@ -1,7 +1,6 @@
 import {text} from '../components/header/Header.jsx'
-import {useState} from 'react'
+import { useState, useEffect } from 'react';
 import React from 'react';
-
 
 
 import './StylesLogin/Login.css'
@@ -17,7 +16,23 @@ import {Modal} from '../components/Modal/modalErrors.jsx';
 
 export function RegistrerPage(){
 
-    const storedError = localStorage.getItem('error');
+
+    const [error, setError] = useState('');
+
+    
+    useEffect(() => {
+        const updateError = () => {
+            const storedError = localStorage.getItem('error');
+            if (storedError) {
+                setError(storedError);
+            } else {
+                setError(''); 
+            }
+        };
+        const interval = setInterval(updateError, 2000);
+        return () => clearInterval(interval);
+    }, []);
+    
 
     const [Password, setPassword] = useState('');
     const [PasswordConf,setPasswordConf] = useState('');
@@ -34,9 +49,11 @@ export function RegistrerPage(){
 
     const handleRegister = (event) => {
         event.preventDefault();
+
     
         
-
+        RegisterAutenticate(email, Password,UserName);
+        localStorage.removeItem("error")
 
         if (Password === '' || email === '' || UserName === '') {
             activeModal("Porfavor Ingrese los datos")
@@ -46,15 +63,16 @@ export function RegistrerPage(){
             activeModal('las contraseñas no coinciden');
             return;
         }
-        if(storedError){
-            activeModal(storedError);
-            localStorage.removeItem('error');
+        
+        if(error){
+         localStorage.removeItem('error');
+                activeModal(error);
             return;
         }
-
-        
-        RegisterAutenticate(email, Password,UserName);
+    
         window.location.href = "/Login"
+    
+        
     }
 
      function chargeEventLoader() {
