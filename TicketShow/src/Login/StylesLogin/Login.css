@@ -169,3 +169,12 @@ form input{
 .btn-Register{
     margin-top: 12px;
 }
+
+form button:hover{
+    transform: scale(1.01);
+    background-color: #A91220;
+}
+form button:active{
+    transform: scale(0.98);
+}
+

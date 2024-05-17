@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {errorsMesage} from '../../props/ErrorsLogin/ErrosHandler.jsx'
+import {errorParam} from '../../props/ErrorsLogin/ErrorsHandler.jsx'
 
 const API_URL = 'http://localhost:3000/api/v1/auth';
 
@@ -11,7 +11,8 @@ export const RegisterAutenticate = async (email, password, username) => {
   } catch (error) {
       if (error.response && error.response.data) {
           const errorMessage = error.response.data.message;
-          errorsMesage(errorMessage);
+          errorParam(errorMessage)
+          //throw new Error(errorMessage);
       } else {
          
           console.error('Error al registrar:', error.message);

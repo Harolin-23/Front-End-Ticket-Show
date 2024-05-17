@@ -7,14 +7,18 @@ import '../Css-Gen/global.css'
 import {FooterApp} from '../components/footer/Footer.jsx'
 
 import { RegisterAutenticate} from '../Api/UserApi/CallRegister.jsx'
+import '../props/ErrorsLogin/errors.css'
+
 
 
 function RegistrerPage(){
     const [Password, setPassword] = useState('');
     const [PasswordConf,setPasswordConf] = useState('');
-
     const [email, setEmail] = useState('');
     const [UserName,setUsername] = useState('');
+
+    const [showMessage, setShowMessage] = useState(false);
+
 
 
 
@@ -32,6 +36,20 @@ function RegistrerPage(){
         }
         RegisterAutenticate(email, Password,UserName);
     }
+
+    const chargeEvent = () => {
+      
+        setShowMessage(true);
+
+
+        setTimeout(() => {
+            setShowMessage(false);
+        }, 3000);
+    };
+
+   
+
+
 
     return(
         <>
@@ -56,10 +74,11 @@ function RegistrerPage(){
                 <input type="password" value={PasswordConf} onChange={(event) => setPasswordConf(event.target.value)} placeholder='Confirm Password'/>
 
                     <div className='met-Links'>
-                    <p>Dont't have a account?</p>
-                    <a href="/Registrer">Registrer</a>
+                    <p>you have a account?</p>
+                    <a href="/Login">Login</a>
 
-                    <button type='submit' className='btn-Register'>Registrar</button>
+                    <button type='submit' className='btn-Register' onClick={chargeEvent}>Registrar</button>
+                    {showMessage  && <div className='authMesage'><i class="fa-solid fa-network-wired"></i></div>}
 
                     </div>
                 </form>
@@ -80,9 +99,6 @@ function RegistrerPage(){
         <FooterApp />
         </>
     )
-
-
-
     
 }
 
