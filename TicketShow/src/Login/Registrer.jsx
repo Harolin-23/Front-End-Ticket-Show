@@ -18,11 +18,6 @@ import {Modal} from '../components/Modal/modalErrors.jsx';
 
 
 
-
-
-
-
-
 export function RegistrerPage(){
 
     const storedError = localStorage.getItem('error');
@@ -61,7 +56,8 @@ export function RegistrerPage(){
       
 
         RegisterAutenticate(email, Password,UserName);
-        activeModal("Registrado con exito")
+        window.location.href = "/Login"
+        
     }
 
      function chargeEventLoader() {
