@@ -11,11 +11,9 @@ export const RegisterAutenticate = async (email, password, username) => {
   } catch (error) {
       if (error.response && error.response.data) {
           const errorMessage = error.response.data.message;
-          errorParam(errorMessage)
-          //throw new Error(errorMessage);
+          errorParam(errorMessage);
+
       } else {
-         
-          console.error('Error al registrar:', error.message);
           throw new Error(error.message || 'Error al registrar');
       }
   }

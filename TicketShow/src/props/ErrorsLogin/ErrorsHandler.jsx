@@ -1,11 +1,11 @@
 
 
+
+
+
+
 export function errorParam(error){
-    console.log(error);
-
-
-
+    const err = error
+    localStorage.setItem('error', JSON.stringify(err));
     
-
-
 }
