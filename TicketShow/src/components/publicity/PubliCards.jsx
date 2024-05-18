@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { GetAllEvnts } from '../../Api/EventsApi/manageEventsApi.jsx'; // Asegúrate de importar tu función de API correctamente
 import '../../components/publicity/StyleCont.css'
 
-
-
 export function DrawPublicity() {
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
@@ -48,7 +46,7 @@ export function DrawPublicity() {
 
     useEffect(() => {
         if (event) {
-            const intervalId = setInterval(() => updateCountdown(event.date), 1000);
+            const intervalId = setInterval(() => updateCountdown(event.date), 500);
             return () => clearInterval(intervalId);
         }
     }, [event]);
