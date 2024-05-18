@@ -10,14 +10,11 @@ import {text} from '../header/Header.jsx'
 
 export function BotomCategories(){
 
-
-
     const [valorAdicional, setValorAdicional] = useState(""); 
 
     const handleClick = (value) => {
         localStorage.setItem("categories",value);
     };
-
 
 
     return(
@@ -27,13 +24,9 @@ export function BotomCategories(){
                 <div className="logo text">
                     <div className='sep'></div>
                 </div>
-
-
         
                 <div className='MtC-Categories'>
                         <div className='container-bt'>
-
-
 
                         <a onClick={() => {handleClick("Funny")}} href="/search/category" className='botomCategorie'>
                         <div className='btm-redictedCar'>
