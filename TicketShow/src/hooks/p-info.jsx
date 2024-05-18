@@ -1,31 +1,38 @@
-import React from 'react';
-import {useState} from 'react'
-import '../Css-Gen/info.css'
+import React from "react";
+import { useState } from "react";
+import "../Css-Gen/info.css";
 
-export function InfoUs(){
-    return(
-        <div className='info-s'>
-            <div className="cd-icon">
-                <i class="fa-solid fa-percent"></i>
-                <h6>Sin tasas de interes <br></br>Acumulativo</h6>
-                <p>Tenemos el mejor manejo de los pagos para tu mejor Economia</p>
-            </div>
-            <div className="cd-icon">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h6>La mayor seguridad <br></br>En tus compras</h6>
-                <p>Nos encargamos de verificar posibles fraudes en voltos</p>
-            </div>
-            <div className="cd-icon">
-                <i class="fa-solid fa-shop"></i>
-                <h6>Tiendas Fisicas<br></br>y faciles para todos</h6>
-                <p>Tenemos muchas otras maneras accesibles de compras de ticketes </p>
-            </div>
-            <div className="cd-icon">
-                <i class="fa-solid fa-location-dot"></i>
-                <h6>Mucho mas cerca<br></br>Estamos disponibles</h6>
-                <p>Eventos Cercanos a ti para una mayor ingracion</p>
-            </div>
-        </div>
-
-    )
+export function InfoUs() {
+  return (
+    <div className="info-s">
+      <div className="cd-icon">
+        <i class="fa-solid fa-percent"></i>
+        <h6>
+          No interest rates.<br></br>Cumulative
+        </h6>
+        <p>We have the best payment management for your optimal economy</p>
+      </div>
+      <div className="cd-icon">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h6>
+          The highest security<br></br>In your purchases
+        </h6>
+        <p>We take care of verifying potential fraud in transactions</p>
+      </div>
+      <div className="cd-icon">
+        <i class="fa-solid fa-shop"></i>
+        <h6>
+        Physical stores<br></br>And easy for everyone
+        </h6>
+        <p>We have many other accessible ways to purchase tickets.</p>
+      </div>
+      <div className="cd-icon">
+        <i class="fa-solid fa-location-dot"></i>
+        <h6>
+        Much closer.<br></br>We are available
+        </h6>
+        <p>Events near you for greater integration</p>
+      </div>
+    </div>
+  );
 }

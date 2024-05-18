@@ -29,10 +29,10 @@ function LoginPage(){
     
 
         if (setPassword === '' || email === '') {
-            activeModal("Por favor, ingrese los datos");
+            activeModal("help send to data");
           return;
         }else if(Password.length < 8){
-            activeModal("Solo se aceptan 8 digitos");
+            activeModal("Only 8 digits are accepted");
         }
 
         await loginAutenticate(email, Password);
@@ -96,7 +96,7 @@ function LoginPage(){
                     <h3>Login</h3>
                 </div>
                 <div className='information-sec'>
-                    <p><i class="fa-solid fa-lock"></i>Cifrado de Datos </p>
+                    <p><i class="fa-solid fa-lock"></i>Data Encryption</p>
                 </div>
                 <form onSubmit={handleSubmit}>
                     
@@ -107,7 +107,7 @@ function LoginPage(){
                     <p>Dont't have a account?</p>
                     <a href="/Registrer">Registrer</a>
 
-                    <button type='submit' onClick={chargeEventLoader}>Ingresar</button>
+                    <button type='submit' onClick={chargeEventLoader}>Log In</button>
                     {showLoader && <div className='authMesage'><i className="fa-solid fa-network-wired"></i></div>}
                     </div>
                 </form>

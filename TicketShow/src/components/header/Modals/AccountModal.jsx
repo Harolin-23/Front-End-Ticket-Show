@@ -1,40 +1,46 @@
-import react from 'react'
-import {useState} from 'react'
+import react from "react";
+import { useState } from "react";
 
-import './ModalAccount.css'
+import "./ModalAccount.css";
 
-function ModalAccount(Checked){
+function ModalAccount(Checked) {
+  const [status, setStatus] = useState(false);
 
-    const [status,setStatus] = useState(false);
+  //Redirects To logins
+  const clickedRedirect = (event) => {
+    window.location.href = "/Login";
+  };
 
-    //Redirects To logins
-    const clickedRedirect = (event)=>{
-    window.location.href = '/Login';
-    }
-
-  return(
-    <div className='accountModal'>
-        <div className='textAccount'>
-            <h1>{status? (<h1>Hola!<br></br> Nombre De usuario</h1>) : (<h1>Iniciar Sesion</h1>)}</h1>
-        </div>
-        <div className='container-account'>
-            {status? (
-                <div className='sesion-Block'>
-                     <button>Sing Out</button>
-                     <a href="">Tu informacion</a>
-                </div>
+  return (
+    <div className="accountModal">
+      <div className="textAccount">
+        <h1>
+          {status ? (
+            <h1>
+              Hello!<br></br>Username
+            </h1>
+          ) : (
+            <h1>Sign in</h1>
+          )}
+        </h1>
+      </div>
+      <div className="container-account">
+        {status ? (
+          <div className="sesion-Block">
+            <button>Sing Out</button>
+            <a href="">Your information</a>
+          </div>
         ) : (
-            <div className='sesion-Block'>
-                    <button onClick={clickedRedirect}>Login</button>
-                        <p>or</p>
-                    <a href="/Registrer">Registrer</a>
-            </div>
-        )   
-            }
-        </div>
-        <p>Las cuentas estan protegidas por cifrado de datos</p>
+          <div className="sesion-Block">
+            <button onClick={clickedRedirect}>Login</button>
+            <p>or</p>
+            <a href="/Registrer">Register</a>
+          </div>
+        )}
+      </div>
+      <p>The accounts are protected by data encryption</p>
     </div>
-  )
+  );
 }
 
 export default ModalAccount;

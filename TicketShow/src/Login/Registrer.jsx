@@ -85,7 +85,7 @@ export function RegisterPage() {
                         <h3>Register</h3>
                     </div>
                     <div className='information-sec registerInfo-sec'>
-                        <p><i className="fa-solid fa-lock"></i>Cifrado de Datos </p>
+                        <p><i className="fa-solid fa-lock"></i>Data Encryption.</p>
                     </div>
                     <form onSubmit={handleRegister} className='formRegister'>
                         <input type="text" value={UserName} onChange={(event) => setUsername(event.target.value)} placeholder='User Name' />

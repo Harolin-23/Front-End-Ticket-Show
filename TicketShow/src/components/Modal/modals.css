@@ -1,76 +1,60 @@
-
-
-.modal-overlay-seion-errors{
-    width: 100%;
-    height: auto;
-    display: none ;
-    position: fixed;
-    top: 0;
-    z-index: 300000;
-    order: 1;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s ease-in-out;
-    display: none; 
-    animation-name: fadeIn;
-    animation-duration: 3.5s;
-    animation-fill-mode: forwards;
-    animation-play-state: paused ;
-    opacity: 0;
+.modal-overlay-seion-errors {
+  width: 100%;
+  height: auto;
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 300000;
+  order: 1;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  display: none;
+  animation-name: fadeIn;
+  animation-duration: 3.5s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  opacity: 0;
 }
 
-
-.modal-overlay-seion-errors.show{
-    display: flex !important;
-    animation-play-state:running !important;
+.modal-overlay-seion-errors.show {
+  display: flex !important;
+  animation-play-state: running !important;
 }
 
 @keyframes fadeIn {
-    0%{
-        opacity: 0;
-        transform: translateY(-200px);
-    }
-    50%{
-        opacity: 1;
-        transform: translateY(20px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(-200px);
-    }
-
-
-
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-200px);
+  }
 }
 
-
-
-
-
-
-
-.modal-content{
-    width: 20%;
-    height: auto;
-    background-color: rgb(53, 15, 15);
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
-
+.modal-content {
+  width: 20%;
+  height: auto;
+  background-color: rgb(53, 15, 15);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
 }
-.modal-content h2{
-    font-size: calc(0.3em + 0.7vw);
-    color: white;
-    margin-top: 12px;
-    display: flex;
-    gap: 20px;
-    
+.modal-content h2 {
+  font-size: calc(0.3em + 0.7vw);
+  color: white;
+  margin-top: 12px;
+  display: flex;
+  gap: 20px;
 }
 
-.modal-content h2 i{
-    color: tomato;
+.modal-content h2 i {
+  color: tomato;
 }
-
-
