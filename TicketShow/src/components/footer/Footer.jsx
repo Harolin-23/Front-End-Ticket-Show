@@ -33,7 +33,6 @@ export function FooterApp() {
         <a href="">
           <h6>Shopping</h6>
         </a>
-        <a href="">Locales</a>
         <a href="">Stores</a>
       </div>
     </footer>
