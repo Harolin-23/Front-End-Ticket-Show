@@ -63,19 +63,19 @@ export function DrawPublicity() {
                         <div className='cointer'>
                             <div className='D num'>
                                 <p>{days}</p>
-                                <h6>Dias</h6>
+                                <h6>Days</h6>
                             </div>
                             <div className='H num'>
                                 <p>{hours}</p>
-                                <h6>Horas</h6>
+                                <h6>Hours</h6>
                             </div>
                             <div className='M num'>
                                 <p>{minutes}</p>
-                                <h6>Minutos</h6>
+                                <h6>Minutes</h6>
                             </div>
                             <div className='S num'>
                                 <p>{seconds}</p>
-                                <h6>Segundos</h6>
+                                <h6>Seconds</h6>
                             </div>
                         </div>
                         <div className='bto-more'>
