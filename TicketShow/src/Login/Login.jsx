@@ -29,7 +29,7 @@ function LoginPage(){
     
 
         if (setPassword === '' || email === '') {
-            activeModal("Por favor, ingrese los datos");
+            activeModal("help send to data");
           return;
         }else if(Password.length < 8){
             activeModal("Solo se aceptan 8 digitos");
