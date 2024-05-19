@@ -7,16 +7,19 @@ export function DrawPublicity() {
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
-    const [event, setEvent] = useState(null); // Estado para el evento aleatorio
+    const [event, setEvent] = useState(null); 
 
     useEffect(() => {
         const fetchEvents = async () => {
             try {
                 const eventData = await GetAllEvnts();
+                
+
+
                 if (eventData.length > 0) {
                     const randomEvent = eventData[Math.floor(Math.random() * eventData.length)];
                     setEvent(randomEvent);
-                    updateCountdown(randomEvent.date); // Llama a la cuenta regresiva con la fecha del evento aleatorio
+                    updateCountdown(randomEvent.date); 
                 }
             } catch (error) {
                 console.error('Error fetching events:', error);

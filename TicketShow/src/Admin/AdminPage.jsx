@@ -7,6 +7,10 @@ import { roleEject } from "../Api/UserApi/Verified/RoleVerified.jsx";
 import "../Login/StylesLogin/Login.css";
 import "./admin.css";
 
+
+
+
+
 function Admin() {
   function logout() {
     window.location.href = "/";
@@ -18,16 +22,47 @@ function Admin() {
 
   const [selectedOption, setSelectedOption] = useState("Get All");
 
+  const [even,setEvent] = useState([])
+
+
+  console.log(dataToken.length)
+
+
+
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   };
+
 
   useEffect(() => {
     const token = sessionStorage.getItem("sessionToken");
     setDataToken(token);
   }, []);
+  
+
+
+
+
 
   if (!dataToken) {
+    return (
+      <div className="erroToAcces">
+        <a href="/" className="logo LErrR">
+          {text.Text}
+          <b className="RS-Logo">{text.bold}</b>
+          {text.textlag}
+        </a>
+        <h1>
+          <br></br>
+          <i class="fa-solid fa-xmark"></i>
+          <br />
+          <i>You do not have access.</i>
+          <br></br>
+          Please, log in.
+        </h1>
+      </div>
+    );
+    }else if(!dataToken ) {
     return (
       <div className="erroToAcces">
         <a href="/" className="logo LErrR">
@@ -51,7 +86,7 @@ function Admin() {
         <div className="container-Admin">
           <div className="menues-interact">
             <div className="Menu">
-              <a href="/" className="logo LErrR">
+              <a href="/" className="logo LErrR title">
                 {text.Text}
                 <b className="RS-Logo">{text.bold}</b>
                 {text.textlag}
@@ -63,8 +98,6 @@ function Admin() {
                   <i class="fa-solid fa-house"></i>
                 </div>
               </div>
-              <details>
-                <summary>Tickets Options</summary>
                 <ul>
                   <li>
                     <h5 onClick={() => handleOptionClick("Get All")}>
@@ -83,15 +116,27 @@ function Admin() {
                     <h5 onClick={() => handleOptionClick("Update")}>Update</h5>
                   </li>
                 </ul>
-              </details>
               <div className="sep"></div>
               <div className="ofLow" onClick={logout}>
-                <i class="fa-solid fa-power-off"></i> Logout
+                <i class="fa-solid fa-power-off"></i><p>Logout</p> 
               </div>
             </div>
 
             <div className="contain-opt">
-              {selectedOption === "Get All" ? (
+              {
+          
+              
+              
+              
+              
+              selectedOption === "Get All" ? (
+
+
+
+
+                  
+
+
                 <>
                   <div className="Busqued-and-info">
                     <form action="">
@@ -107,23 +152,12 @@ function Admin() {
                       <i class="fa-solid fa-bolt"></i>
                     </div>
                     <div className="data-event  events-info">
-                      <div className="card-ev-admin">
-                        <div className="minture-img">
-                          <i class="fa-solid fa-ticket"></i>
-                        </div>
-                        <div className="info-event">
-                          <h6>Title</h6>
-                          <p>Description</p>
-                        </div>
-                        <div className="more-inf">
-                          <h6>Medellin</h6>
-                          <p>2024-05-15 18:00:00.000000</p>
-                          <h4>Categories</h4>
-                        </div>
-                        <div className="more-inf-dt">
-                          <h4>Capacity: 123</h4>
-                        </div>
-                      </div>
+
+
+
+
+
+
                     </div>
                   </div>
                 </>

@@ -409,7 +409,13 @@ details{
     flex-direction: column;
     justify-content: center;
 }
-
+.events-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    overflow-y: auto;
+}
 
 
 
@@ -477,6 +483,23 @@ details{
 
 @media (max-width: 746px) {
 
+    .title{
+        display: none;
+    }
+    .sep{
+        display: none;
+    }
+    .ofLow {
+        font-size: calc(1.5em + 1vw);
+        width: 60px;
+        height: auto;
+    }
+
+
+    .ofLow p{
+        display: none;
+    }
+
     .footer-admin{
         justify-content: center;
         gap: 12px;
@@ -509,13 +532,55 @@ details{
     .Menu{
         width: 100%;
         height: 100px;
+        display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        gap: 20px;
+        align-items: center;
+        justify-content:space-around ;
+        
     }
 
+    .Busqued-and-info{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .contain-events-Api{
+        width: 100%;
+    }
+    .menues-interact{
+        width: 100%;
+    }
     .contain-opt{
         width: 100%;
     }
+     ul{
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        height: auto;
+        justify-content: space-around;
+    }
+    ul li{
+        width: 55px;
+        height: 40px;
+        padding: 12px;
+    }
+    ul li{
+        height: 30px;
+        width: 65px;
+        
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+
+    ul li::after{
+        display: none;
+    }
+
 
 
 }
