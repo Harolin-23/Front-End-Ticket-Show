@@ -23,6 +23,11 @@ export function DrawEvents() {
     fetchEvents();
   }, []);
 
+
+
+
+  
+
   return (
     <div className="card-e">
       <div className="name-section">

@@ -1,12 +1,12 @@
 import React from 'react';
+import axios from "axios";
 
-
-const URL = 'http://localhost:8080/api/v1';
+const URL = 'http://localhost:8080/api/v1/';
 
 
 export async function getEvents(page , size){
 
-    const getEventUrl = `/events/search/?page=${page}&size=${size}`;
+    const getEventUrl = `events/auth/search?page=1&size=4`;
 
     const response = await fetch(URL + getEventUrl);
     const data = await response.json();
@@ -18,7 +18,7 @@ export async function getEvents(page , size){
 
 export async function getEvent(id){
 
-    const getEventUrl = `/events/search/?event=${id}`;
+    const getEventUrl = `events/auth/${id}`;
 
     const response = await fetch(URL + getEventUrl);
     const data = await response.json();
@@ -30,10 +30,38 @@ export async function getEvent(id){
 
 export async function GetAllEvnts(){
 
-    const UrlSet = `/events/search/?page=1&size=2000`
+    const UrlSet = `events/auth/search`
     const response = await fetch(URL + UrlSet);
     const data = await response.json();
 
     return data.content;
 }
+
+
+
+
+
+
+export const saveEvents = async (dataEvent) => {
+    const UrlSet = `events/add`;
+
+    try {
+        const response = await axios.post(`${URL}${UrlSet}`, dataEvent, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        return response;
+    } catch (e) {
+        console.log(e);
+    }
+};
+
+
+
+
+
+
+
+
 

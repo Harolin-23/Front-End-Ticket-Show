@@ -16,7 +16,7 @@ export async function GetById(){
   export async function GetTitule(){
     let bLocal = localStorage.getItem("search");
 
-    const urlNameSearch = `events/search/?title=${bLocal}&page=1&size=10`;
+    const urlNameSearch = `events/auth/search?title=${bLocal}&page=1&size=100`;
 
     const response = await fetch( Url + urlNameSearch);
     const data = await response.json();
@@ -30,7 +30,7 @@ export async function GetById(){
 
     let urlNameSearch;
 
-      urlNameSearch = `events/search/?page=${page}&size=6` 
+      urlNameSearch = `events/auth/search?page=${page}&size=6` 
       const response = await fetch( Url + urlNameSearch);
       const data = await response.json();
   
@@ -47,7 +47,7 @@ export async function GetById(){
 
     const value = localStorage.getItem("categories")
 
-    urlNameSearch = `events/search/?category=${value}&page=1&size=6`
+    urlNameSearch = `events/auth/search?category=${value}&page=1&size=6`
 
     const response = await fetch( Url + urlNameSearch);
     const data = await response.json();
