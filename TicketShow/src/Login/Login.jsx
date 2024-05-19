@@ -41,7 +41,6 @@ function LoginPage(){
 
             const token = response.data.data.token;   
             const emailPetition =  response.data.data.email;
-
                      sessionStorage.setItem('sessionToken', token);
                      sessionStorage.setItem('EmailPetition', emailPetition);
                      authenticationRole();

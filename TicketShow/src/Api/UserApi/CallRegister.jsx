@@ -3,6 +3,9 @@ import { errorParam } from "../../props/ErrorsLogin/ErrorsHandler.jsx";
 
 const API_URL = "http://localhost:3000/api/v1/auth";
 
+
+
+
 export const RegisterAutenticate = async (email, password, username) => {
   try {
     const response = await axios.post(`${API_URL}/register`, {
@@ -10,6 +13,8 @@ export const RegisterAutenticate = async (email, password, username) => {
       password,
       username,
     });
+
+
     return response;
   } catch (error) {
     if (error.response && error.response.data) {

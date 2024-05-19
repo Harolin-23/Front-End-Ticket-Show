@@ -9,6 +9,10 @@ import '../props/ErrorsLogin/errors.css';
 import { Modal } from '../components/Modal/modalErrors.jsx';
 
 export function RegisterPage() {
+
+
+
+
     const [ErrAlert, setErrAlert] = useState('');
     const [Password, setPassword] = useState('');
     const [PasswordConf, setPasswordConf] = useState('');
@@ -28,6 +32,9 @@ export function RegisterPage() {
             activeModal('Las contraseñas no coinciden');
             return;
         }
+
+        //En esta parte de manejo de error me quede trabado por todo un dia y con dolor de cabeza
+        //estuvo dificil que el mensaje no llegara atrasado del local storage pero se pudo
 
         await RegisterAutenticate(email, Password, UserName);
 
@@ -92,6 +99,7 @@ export function RegisterPage() {
                         <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder='Correo Electronico' />
                         <input type="password" value={Password} onChange={(event) => setPassword(event.target.value)} placeholder='Contraseña' />
                         <input type="password" value={PasswordConf} onChange={(event) => setPasswordConf(event.target.value)} placeholder='Confirm Password' />
+
 
                         <div className='met-Links'>
                             <p>you have a account?</p>
