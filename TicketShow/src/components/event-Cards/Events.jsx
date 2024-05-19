@@ -16,12 +16,11 @@ export function DrawEvents() {
 
   const clickedEvent = async (id) =>{
     const eventData = await getEventByID(id);
-    console.log(eventData)
+    console.log(eventData);
     localStorage.setItem("Event",JSON.stringify(eventData))
     window.location.href = "/Events"
   }
 
-  console.log()
 
 
 

@@ -165,7 +165,7 @@ function EventPageShop(){
                             </div>
                         </div>
                         <div className='bto-more'>
-                            <button>Comprar tickets</button>
+                            <button >Comprar tickets</button>
                         </div>
             </div>
             <div className="more-btnshow">
