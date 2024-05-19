@@ -141,7 +141,8 @@ function EventPageShop(){
                 </div>
             </div>
             <div className="info-shop">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ullam recusandae dignissimos voluptas rerum. In similique adipisci quae quisquam atque iste doloremque necessitatibus, repudiandae nam asperiores reprehenderit, non nobis! Quas?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus qui perspiciatis aspernatur esse rerum distinctio ea architecto odit iure aperiam natus, sapiente animi. Voluptatem ut nisi officiis quaerat! Quae, rem.</p>
+                <p>    Enjoy our special offers and exclusive discounts. By registering on our website, you will gain access to promotions and stay updated with our latest news. Thank you for choosing us and trusting us with your purchases.
+</p>
             </div>
             <div className="contador-cont-evt">
                         <h1>{objet.title}</h1>
