@@ -7,6 +7,14 @@
     align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+    .recomends{
+        flex-direction: row;
+        width: 110%;
+        align-items: stretch;
+
+    }
+}
 .rec-card{
     width: 40%;
     height: 90%;

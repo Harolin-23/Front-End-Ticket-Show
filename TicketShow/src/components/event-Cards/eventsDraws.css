@@ -1,13 +1,20 @@
 .card-e{
-    margin-top: 50px;
+    
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
 }
 
+@media screen and (max-width: 760px) {
+    .card-e{
+        flex-direction: column;
+        margin-top: 470px;
+        width: 70%;
+    }
+}
 .name-section{
     height: 40px;
     font-size: 3em;
@@ -37,9 +44,8 @@
     flex-wrap: wrap;
     margin-bottom: 20px;
     gap: 5%;
-
-    
 }
+    
 .cardE{
     width: 340px;
     height: 360px;

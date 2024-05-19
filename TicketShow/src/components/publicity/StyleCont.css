@@ -10,6 +10,14 @@
     0 0 0 2px rgba(255, 255, 255, 0.177),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.113);
 }
+
+@media screen and (max-width: 760px) {
+    .publicity-cont{
+        flex-direction: column;
+        width: 95%;
+        height: 700px;
+    }
+}
 .info-event-publi{
     width: 50%;
     height: 100%;
