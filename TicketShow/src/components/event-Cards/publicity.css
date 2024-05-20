@@ -7,14 +7,7 @@
     align-items: center;
 }
 
-@media screen and (max-width: 600px) {
-    .recomends{
-        flex-direction: row;
-        width: 110%;
-        align-items: stretch;
 
-    }
-}
 .rec-card{
     width: 40%;
     height: 90%;
@@ -61,4 +54,25 @@
     z-index: -2;
     filter: brightness(0.3);
     border-radius: 12px;
+}
+
+
+@media screen and (max-width: 700px) {
+    .recomends{
+        flex-direction: column;
+        width: 100% !important;
+        gap: 12px;
+        height: auto;
+    }
+
+    .rec-card{
+        width: 90%;
+    }
+    .container-cards-Events{
+        padding: 0;
+    }
+
+
+   
+
 }

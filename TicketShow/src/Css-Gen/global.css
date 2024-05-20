@@ -8,6 +8,7 @@
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 
+
 }
 
 :root{
@@ -52,4 +53,8 @@
   
   *::-webkit-scrollbar-thumb:hover {
     background:var(--color-MR); 
+  }
+
+  body{
+    background-color: white;
   }
