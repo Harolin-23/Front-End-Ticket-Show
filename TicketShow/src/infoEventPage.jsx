@@ -13,6 +13,9 @@ import {FooterApp} from './components/footer/Footer.jsx'
 
 function EventPageShop(){
 
+    const redirectPay = ()=>{
+        window.location.href = "/shopPay"
+    }
 
     let eventDataShop  = localStorage.getItem("Event");
 
@@ -88,7 +91,7 @@ function EventPageShop(){
                 <p>hora :{formattedTime}</p>
                 <p>Fecha: {monthIndex }{month}</p>
                 <p>capacity: {objet.capacity}</p>
-                <button><b>Comprar tickets</b></button>
+                <button onClick={redirectPay}><b>Comprar tickets</b></button>
             </div>
         </div>
         <div className="sep"></div>
@@ -166,7 +169,7 @@ function EventPageShop(){
                             </div>
                         </div>
                         <div className='bto-more'>
-                            <button >Comprar tickets</button>
+                            <button onClick={redirectPay}>Comprar tickets</button>
                         </div>
             </div>
             <div className="more-btnshow">

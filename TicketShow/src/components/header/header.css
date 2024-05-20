@@ -108,3 +108,55 @@ header{
         color :red;
     }
 }
+
+
+@media (max-width: 1175px) {
+    .link-Dynamic{
+        display: none;
+    }
+
+    .logo{
+         font-size: calc(0.5em + 1.5vw);
+         
+    }
+    .input-Search input{
+        font-size: calc(0.9em + 0.2vw);
+
+    }
+
+
+
+}
+@media (max-width: 651px) {
+    .logo{
+     display: none;
+        
+   }
+   .input-Search{
+    width: 70%;
+    margin-left: 12px;
+    font-size: calc(0.9em + 0.2vw);
+
+}
+.sesionBlock{
+    width: 90px;
+}
+
+.sesionBlock i{
+    font-size: calc(0.9em + 0.2vw);
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+

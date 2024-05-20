@@ -3,12 +3,13 @@
 .categories{
     margin-top: 20px;
     width: 99%;
-    height: 170px;
+    height: auto;
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
     position: relative;
     z-index: -2 !important;
+   
     
 }
 .text{
@@ -42,13 +43,10 @@
     justify-content: center;
     gap: 5%;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-@media screen and (max-width: 760px) {
-    .container-bt{
-        flex-direction: column;
-    }
-}
+
 .container-bt a{
     text-decoration: none;
 }
@@ -102,4 +100,59 @@
     width: 99%;
     height: 2px;
     background-color: rgba(0, 0, 0, 0.095);
+}
+
+
+
+@media screen and (max-width: 420px) {
+    .container-bt{
+        flex-direction: column;
+    }
+    .btm-redictedCar{
+        width: 230px;
+    }
+    
+  
+
+
+
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 890px) {
+
+    .btm-redictedCar{
+        width: 280px;
+    }
+    
+  
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .categories{
+        width: 100%;
+    }
+
+
+    .container-bt{
+       width: 100%;
+    }
+
+
+    .btm-redictedCar{
+        width: 300px;
+    }
+    
 }

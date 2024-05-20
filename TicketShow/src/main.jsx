@@ -12,6 +12,7 @@ import RegistrerPage from './Login/Registrer.jsx'
 import CategireCast from './Api/search/categorieSearch/categories.jsx'
 import Admin from './Admin/AdminPage.jsx'
 import EventPageShop from './infoEventPage.jsx'
+import SeatSealect from './formCompra.jsx'
 
 
 
@@ -27,6 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/search/category" element={<CategireCast />}   /> 
         <Route path="/Events" element={<EventPageShop />}   /> 
         <Route path="/ADMIN" element={<Admin />}   /> 
+        <Route path="/shopPay" element={<SeatSealect />}   /> 
 
       </Routes>
     </Router>

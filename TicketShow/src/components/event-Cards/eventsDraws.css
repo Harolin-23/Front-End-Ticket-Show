@@ -8,13 +8,8 @@
     
 }
 
-@media screen and (max-width: 760px) {
-    .card-e{
-        flex-direction: column;
-        margin-top: 470px;
-        width: 70%;
-    }
-}
+
+
 .name-section{
     height: 40px;
     font-size: 3em;
@@ -184,4 +179,42 @@
     100%{
         opacity: 0;
     }
+}
+
+
+
+
+@media screen and (max-width: 760px) {
+    .card-e{
+        flex-direction: column;
+        width: 100%;
+    }
+    .container-cards-Events{
+        width: 100%;
+        align-items: center;
+    }
+}
+
+
+
+@media screen and (max-width: 1245px) {
+
+    .container-cards-Events{
+        width: 100%;
+
+            justify-content: space-around;
+    }
+}
+
+
+
+
+@media screen and (max-width: 609px) {
+    .container-cards-Events{
+        width: 100%;
+        padding: 0;
+
+           
+    }
+  
 }
