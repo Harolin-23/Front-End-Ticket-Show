@@ -5,9 +5,25 @@ import "./publicity.css";
 import { useEffect, useRef, useState } from "react";
 import { publicity } from "../../props/cardsTemp/eventsD.js";
 import { getEvents } from "../../Api/EventsApi/manageEventsApi.jsx";
+import {getEventByID} from '../../Api/EventsApi/manageEventsApi.jsx'
 
 export function DrawEvents2() {
   const [events, setEvents] = useState([]);
+
+
+
+  const clickedEvent = async (id) =>{
+    const eventData = await getEventByID(id);
+    console.log(eventData)
+    localStorage.setItem("Event",JSON.stringify(eventData))
+    window.location.href = "/Events"
+  }
+
+
+
+
+
+
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -31,14 +47,14 @@ export function DrawEvents2() {
       <div className="container-cards-Events">
         {events.length > 0 ? (
           events.map((e, index) => (
-            <div className="cardE" key={index}>
+            <div className="cardE" key={index} id={e.id}>
               <div className="image-event">
                 <img src={e.image_url} />
               </div>
               <div className="infoContain-card-event">
                 <h6>{e.title}</h6>
                 <p>{e.description}</p>
-                <button>Get more info</button>
+                <button onClick={() => clickedEvent(e.id)}>Get more info</button>
               </div>
             </div>
           ))

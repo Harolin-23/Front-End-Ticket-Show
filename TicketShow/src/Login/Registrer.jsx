@@ -26,10 +26,10 @@ export function RegisterPage() {
         event.preventDefault();
 
         if (Password === '' || email === '' || UserName === '') {
-            activeModal("Por favor, ingrese los datos");
+            activeModal("Please enter the data");
             return;
         } else if (PasswordConf !== Password) {
-            activeModal('Las contraseñas no coinciden');
+            activeModal('The passwords do not match');
             return;
         }
 
@@ -102,10 +102,10 @@ export function RegisterPage() {
 
 
                         <div className='met-Links'>
-                            <p>you have a account?</p>
+                            <p>You have a account?</p>
                             <a href="/Login">Login</a>
 
-                            <button type='submit' className='btn-Register' onClick={chargeEventLoader}>Registrar</button>
+                            <button type='submit' className='btn-Register' onClick={chargeEventLoader}>Register</button>
                             {showLoader && <div className='authMesage'><i className="fa-solid fa-network-wired"></i></div>}
                         </div>
                     </form>

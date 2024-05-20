@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import { GetAllEvnts } from '../../Api/EventsApi/manageEventsApi.jsx'; // Asegúrate de importar tu función de API correctamente
 import '../../components/publicity/StyleCont.css'
 
+import {getEventByID} from '../../Api/EventsApi/manageEventsApi.jsx'
+
+
 export function DrawPublicity() {
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
@@ -9,13 +12,19 @@ export function DrawPublicity() {
     const [seconds, setSeconds] = useState(0);
     const [event, setEvent] = useState(null); 
 
+
+    const clickedEvent = async (id) =>{
+        const eventData = await getEventByID(id);
+        console.log(eventData);
+        localStorage.setItem("Event",JSON.stringify(eventData))
+        window.location.href = "/Events"
+      }
+
     useEffect(() => {
+
         const fetchEvents = async () => {
             try {
                 const eventData = await GetAllEvnts();
-                
-
-
                 if (eventData.length > 0) {
                     const randomEvent = eventData[Math.floor(Math.random() * eventData.length)];
                     setEvent(randomEvent);
@@ -54,6 +63,17 @@ export function DrawPublicity() {
         }
     }, [event]);
 
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div className='publicity-cont'>
             {event ? (
@@ -82,8 +102,10 @@ export function DrawPublicity() {
                             </div>
                         </div>
                         <div className='bto-more'>
-                            <button>Show More</button>
+                            <button onClick={() => clickedEvent(event.id)}>Show More</button>
                         </div>
+
+                        
                     </div>
                     <div className='image-public-event'>
                         <img src={event.image_url} alt="" />
