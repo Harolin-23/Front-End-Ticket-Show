@@ -77,7 +77,7 @@ function EventPageShop(){
         <>
         <HeaderGen/>
         <div className="event-content-shop">
-            <div className="image-event">
+            <div className="image-event-shop">
                 <div className="container-img">
                     <img src={objet.image_url} alt="" />
                 </div>

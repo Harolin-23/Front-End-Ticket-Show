@@ -41,9 +41,6 @@ export function DrawEvents() {
 
 
 
-
-  
-
   return (
     <div className="card-e">
       <div className="name-section">
