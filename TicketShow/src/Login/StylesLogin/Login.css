@@ -178,3 +178,20 @@ form button:active{
     transform: scale(0.98);
 }
 
+@media (max-width: 990px) {
+
+
+
+    .Deco-section{
+       display: none;
+    }
+    .formulario-container{
+        width: 100%;
+    }
+    .desclog{
+        display: flex;
+    }
+
+
+
+}

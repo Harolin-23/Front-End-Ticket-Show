@@ -86,7 +86,7 @@ function LoginPage(){
     return(
         <>
         <div className='titule-Login'>
-            <a href="/" className='logo'>{text.Text}<b className="RS-Logo">{text.bold}</b>{text.textlag}</a>
+            <a href="/" className='logo desclog'>{text.Text}<b className="RS-Logo">{text.bold}</b>{text.textlag}</a>
         </div>
         <Modal show={showModal} message={modalMessage} onClose={closeModal} />
         <div className='ContainerSesion'>

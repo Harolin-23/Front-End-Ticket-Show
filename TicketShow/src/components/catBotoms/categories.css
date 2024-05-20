@@ -104,55 +104,53 @@
 
 
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 1032px) {
     .container-bt{
         flex-direction: column;
     }
     .btm-redictedCar{
         width: 230px;
     }
-    
-  
-
-
-
-
-
-}
-
-
-
-
-
-@media screen and (max-width: 890px) {
-
-    .btm-redictedCar{
-        width: 280px;
+    .slider-vertical {
+        display: none;
     }
-    
-  
-
-
-
-
-
-}
-
-
-@media screen and (max-width: 600px) {
-
-    .categories{
+    .container-cards{
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px !important;
+        margin-left: 15%;
+    }
+    .categories-Conten{
         width: 100%;
-    }
-
-
-    .container-bt{
-       width: 100%;
-    }
-
-
-    .btm-redictedCar{
-        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
+  
+
+
+
+
+
 }
+
+@media screen and (max-width: 768px){
+
+    
+    .container-cards{
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+    }
+
+
+}
+
+
+
+
+

@@ -1,6 +1,6 @@
 .event-content-shop{
     width: 100%;
-    height: 500px;
+    height: auto;
     display: flex;
     position: relative;
     margin-top: 20px;
@@ -10,11 +10,12 @@
 
 .image-event-shop{
     width: 50%;
-    height: 100%;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
+    flex-wrap: wrap;
 }
 .image-event-shop img{
     width: 100%;
@@ -63,4 +64,54 @@
     font-size: calc(0.5em + 1vw);
     margin-left: 20px;
     background-color: var(--color-MR);
+}
+
+.info-content p i{
+    color: red;
+}
+
+@media screen and (max-width: 990px) {
+    .event-content-shop{
+        flex-direction: column !important;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    .image-event-shop{
+        width: 100%;
+    }
+
+    .event-content-shop button{
+        width: 90%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .info-content{
+        width: 100%;
+    }
+    .info-content h1{
+        margin-left: 10%;
+    }
+    .info-content p{
+        margin-left: 10%;
+        font-size: calc(0.8em + 0.8vw) !important;
+    }
+    .date{
+        width: 140px;
+        height: 220px;
+    }
+    
+
+    .moreDates{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        justify-content:start;
+        gap: 20px
+        ;
+    }
+   
+
 }
