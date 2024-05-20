@@ -1,10 +1,31 @@
 import react from "react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import "./ModalAccount.css";
 
 function ModalAccount(Checked) {
+
   const [status, setStatus] = useState(false);
+  const [email, setEmail] = useState("");
+
+  let stu = localStorage.getItem("status");
+  let name = localStorage.getItem("EmailPetition");
+
+  useEffect(() => {
+    if(stu == "active"){
+      setStatus(true);
+      setEmail(name)
+    }else{
+      setStatus(false);
+    }
+  
+
+  },);
+
+
+ 
+
+
 
   //Redirects To logins
   const clickedRedirect = (event) => {
@@ -17,7 +38,7 @@ function ModalAccount(Checked) {
         <h1>
           {status ? (
             <h1>
-              Hello!<br></br>Username
+              Hello!<br></br>{name}
             </h1>
           ) : (
             <h1>Sign in</h1>

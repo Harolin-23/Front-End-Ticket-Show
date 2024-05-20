@@ -4,6 +4,9 @@ import { useEffect, useState } from 'react';
 import { GetCategorie } from '../../../Api/search/styleSearch/CallApis.jsx';
 import  { GetCategorieOther } from '../../../Api/search/styleSearch/CallApis.jsx';
 
+
+import { getEventByID } from "../../EventsApi/manageEventsApi.jsx";
+
 import './categories.css';
 import '../../../Css-Gen/global.css';
 
@@ -14,6 +17,19 @@ function CategireCast() {
     const [eventCategorie, setEventCategorie] = useState([]);
     const [pagination, setPagination] = useState(1);
     const [size, setSize] = useState(1);
+
+
+
+    const clickedEvent = async (id) =>{
+        const eventData = await getEventByID(id);
+        console.log(eventData);
+        localStorage.setItem("Event",JSON.stringify(eventData))
+        window.location.href = "/Events"
+      }
+    
+
+
+
 
     useEffect(() => {
         const fetchEvents = async () => {
@@ -66,7 +82,7 @@ function CategireCast() {
                                 <div className='infoContain-card-event'>
                                     <h6>{e.title}</h6>
                                     <p>{e.description}</p>
-                                    <button>Get more info</button>
+                                    <button onClick={() => clickedEvent(e.id)}>Get more info</button>
                                 </div>
                             </div>
                         ))

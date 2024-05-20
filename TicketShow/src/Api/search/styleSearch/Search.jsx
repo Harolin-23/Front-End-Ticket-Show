@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 
 import "./Busquedastyles.css";
 import { SectionConfig } from "../../../components/SectionConfig/btns-ConfigSearch.jsx";
-import { GetById } from "./CallApis.jsx";
+import { getEventByID } from "../../EventsApi/manageEventsApi.jsx";
 import { GetTitule } from "./CallApis.jsx";
+
+
 
 let busquedaGen = "";
 let bLocal = localStorage.getItem("search");
@@ -21,7 +23,7 @@ export async function callSearch(busqueda) {
 
 export function BusquedaFuction() {
   if (!isNaN(busquedaGen)) {
-    GetById();
+    getEventByID();
   } else {
     GetTitule();
   }
@@ -61,6 +63,19 @@ export function DrawsSearch() {
   }, []);
   console.log(eventosList);
 
+
+  const clickedEvent = async (id) =>{
+    const eventData = await getEventByID(id);
+    console.log(eventData);
+    localStorage.setItem("Event",JSON.stringify(eventData))
+    window.location.href = "/Events"
+  }
+
+
+
+
+
+
   return (
     <>
       <div className="container-Events-search">
@@ -74,9 +89,8 @@ export function DrawsSearch() {
                 <h1>{e.title}</h1>
                 <p>City: {e.city}</p>
                 <p>Date: {e.date}</p>
-                <a href="">
-                  {" "}
-                  <h6>Purchase Tickets</h6>
+                <a onClick={() => clickedEvent(e.id)}>
+                  <h6 >Purchase Tickets</h6>
                 </a>
               </div>
             </div>

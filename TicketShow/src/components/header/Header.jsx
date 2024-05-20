@@ -1,7 +1,7 @@
-import { useState } from "react";
+
 import { callSearch } from "../../Api/search/styleSearch/Search.jsx";
 import React from "react";
-
+import { useEffect, useRef, useState } from "react";
 import LinksDin from "./LinksComponents/DynamicLinks";
 import "./header.css";
 import "./LinksComponents/ModalStyle.css";
@@ -16,8 +16,31 @@ export const text = {
 };
 
 export function HeaderGen() {
-  //  Estado de cuenta activo
   const [isLoggedd, setIsLogged] = useState(false);
+
+
+    let sesion = sessionStorage.getItem("sessionToken");
+
+   
+    useEffect(() => {
+      if(sesion){
+        console.log("active")
+        setIsLogged(true);
+        localStorage.setItem("status","active")
+      }else{
+        setIsLogged(false);
+      }
+    
+
+    },);
+
+
+
+
+
+
+  //  Estado de cuenta activo
+ 
 
   //Busqueda Logic-------------------
   //Estado de Busqueda
