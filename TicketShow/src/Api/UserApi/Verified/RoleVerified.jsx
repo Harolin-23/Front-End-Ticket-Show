@@ -16,9 +16,7 @@ export function authenticationRole(){
  
     //EmailGetSolicitued = sessionStorage.getItem('EmailPetition');
     console.log("enviando")
-    
-
-
+  
 }
 
 
@@ -46,15 +44,41 @@ export const fetchPayload = async (token) => {
       localStorage.setItem("status", data.email)
       console.log(data.role)
       redirectRole(data.role)
-      return data;
+      return data.role;
     } catch (error) {
       console.error('Error:', error);
       throw error;
     }
   };
+  
+export const fetchPayloadAdminVerified = async (token) => {
 
 
 
+  console.log("enviando el token")
+  const urlSend = 'http://localhost:8080/api/v1/auth/payload';
+
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'text/plain',
+      'Authorization': `Bearer ${token}`
+    }
+  };
+
+  try {
+    const response = await fetch(urlSend, options);
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
+    const data = await response.json(); 
+    localStorage.setItem("status", data.email)
+    return data.role;
+  } catch (error) {
+    console.error('Error:', error);
+    throw error;
+  }
+};
 
 
 

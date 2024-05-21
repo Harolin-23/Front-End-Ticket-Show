@@ -10,6 +10,7 @@ import {saveEvents} from '../Api/EventsApi/manageEventsApi.jsx'
 import {deleteEvents} from '../Api/EventsApi/manageEventsApi.jsx'
 import {UpdateEvents} from '../Api/EventsApi/manageEventsApi.jsx'
 import {getEventByID} from '../Api/EventsApi/manageEventsApi.jsx'
+import{fetchPayloadAdminVerified} from '../Api/UserApi/Verified/RoleVerified.jsx'
 
 
 import {ErrorSituation} from '../props/errorManageRoutes/errorPageConcs.jsx'
@@ -17,17 +18,12 @@ import {ErrorSituation} from '../props/errorManageRoutes/errorPageConcs.jsx'
 import "../Login/StylesLogin/Login.css";
 import "./admin.css";
 
-
-
-
-
 function Admin() {
   function logout() {
     window.location.href = "/";
     sessionStorage.removeItem("sessionToken");
     sessionStorage.removeItem("EmailPetition");
   }
-
   const [dataToken, setDataToken] = useState('');
 
   const [selectedOption, setSelectedOption] = useState("Get All");
@@ -109,15 +105,10 @@ function Admin() {
     fetchEvents(); 
   };
 
-
   useEffect(() => {
     const token = sessionStorage.getItem("sessionToken");
     setDataToken(token);
   }, []);
-
- 
-
-
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
@@ -166,13 +157,21 @@ function Admin() {
     setDate(eventUpdate.date)
   }
 
+  const [verifed, setVerifiedAdmin] = useState(false);
+
+  useEffect( async() => {
+    let dataToken = sessionStorage.getItem('sessionToken');
+
+    const ver = await fetchPayloadAdminVerified(dataToken);
+    if(ver === 'admin'){
+      setVerifiedAdmin(true)
+    }else{
+      setVerifiedAdmin(false)
+    }
+  }, []);
 
 
-
-
-
-
-  if (!dataToken) {
+  if (!verifed) {
     return (
       <ErrorSituation  errorTx="you Don't have a permision" infoAct="please login"/>
     );
@@ -399,9 +398,6 @@ function Admin() {
               ) : null}
             </div>
           </div>
-
-
-
           <div className="footer-admin">
             <div className="logo-info">
               <a href="/" className="logo LErrR">
