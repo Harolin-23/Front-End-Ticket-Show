@@ -13,6 +13,14 @@ import { loginAutenticate} from '../Api/UserApi/CallVerUser.jsx'
 import {authenticationRole} from '../Api/UserApi/Verified/RoleVerified.jsx'
 import {errorParam} from '../props/ErrorsLogin/ErrorsHandler.jsx'
 
+export const redirectRole = async(rol)=>{
+    if(rol =='admin'){
+        window.location.href = "/ADMIN"
+    }else{
+        window.location.href = "/"
+    }
+}
+
 
 function LoginPage(){
 

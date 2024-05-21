@@ -8,21 +8,25 @@ function ModalAccount(Checked) {
   const [status, setStatus] = useState(false);
   const [email, setEmail] = useState("");
 
-  let stu = localStorage.getItem("status");
-  let name = localStorage.getItem("EmailPetition");
+   let stu = localStorage.getItem("status");
+   let name = localStorage.getItem("EmailPetition");
 
-  useEffect(() => {
-    if(stu == "active"){
-      setStatus(true);
-      setEmail(name)
-    }else{
-      setStatus(false);
-    }
-  
+   useEffect(() => {
+     if(stu == "active"){
+       setStatus(true);
+       setEmail(name)
+   }else{
+       setStatus(false);
+     }
+   },);
 
-  },);
-
-
+   function deslogued(){
+    localStorage.removeItem("status");
+    localStorage.getItem("EmailPetition");
+    sessionStorage.removeItem("sessionToken")
+    sessionStorage.removeItem("EmailPetition")
+    window.location.href = "/";
+   }
  
 
 
@@ -48,7 +52,7 @@ function ModalAccount(Checked) {
       <div className="container-account">
         {status ? (
           <div className="sesion-Block">
-            <button>Sing Out</button>
+            <button onClick={deslogued}>Sing Out</button>
             <a href="">Your information</a>
           </div>
         ) : (

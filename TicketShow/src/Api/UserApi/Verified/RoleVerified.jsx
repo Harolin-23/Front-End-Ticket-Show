@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-
+import{redirectRole} from '../../../Login/Login'
 
 
 const URL = 'http://localhost:8080/api/v1';
@@ -42,7 +42,10 @@ export const fetchPayload = async (token) => {
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
       }
-      const data = await response.json(); // Assuming the response is JSON
+      const data = await response.json(); 
+      localStorage.setItem("status", data.email)
+      console.log(data.role)
+      redirectRole(data.role)
       return data;
     } catch (error) {
       console.error('Error:', error);

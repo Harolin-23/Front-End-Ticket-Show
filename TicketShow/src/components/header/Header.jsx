@@ -19,20 +19,20 @@ export function HeaderGen() {
   const [isLoggedd, setIsLogged] = useState(false);
 
 
-    let sesion = sessionStorage.getItem("sessionToken");
+    // let sesion = sessionStorage.getItem("sessionToken");
 
    
-    useEffect(() => {
-      if(sesion){
-        console.log("active")
-        setIsLogged(true);
-        localStorage.setItem("status","active")
-      }else{
-        setIsLogged(false);
-      }
+    // useEffect(() => {
+    //   if(sesion){
+    //     console.log("active")
+    //     setIsLogged(true);
+    //     localStorage.setItem("status","active")
+    //   }else{
+    //     setIsLogged(false);
+    //   }
     
 
-    },);
+    // },);
 
 
 
