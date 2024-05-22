@@ -134,10 +134,17 @@
         color: white;
         background: linear-gradient(#ff7e7929, #000000f5) !important;
     }
+   
+
+
+
+
+
+}
+
+@media screen and (max-width: 643px){
+    .cointer{
+        font-size: calc(0.4em + 1vw);
+    }
   
-
-
-
-
-
 }
